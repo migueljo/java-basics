@@ -1,6 +1,7 @@
 public class NamingJava {
     public static void main(String[] args) {
         int cellphone = 32321423;
+        // Lower camel case
         int cellPhone = 98686868;
         System.out.println(cellphone);
         System.out.println(cellPhone);
