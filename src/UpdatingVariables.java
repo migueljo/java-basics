@@ -12,5 +12,10 @@ public class UpdatingVariables {
         salary += 2 * 30;
         salary -= 45;
         System.out.println("The salary is: $" + salary);
+
+        // Updating strings
+        String employeeName = "Miguel Martínez";
+        employeeName += " Martínez";
+        System.out.println("The employee name is: " + employeeName);
     }
 }
