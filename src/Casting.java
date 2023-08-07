@@ -5,5 +5,8 @@ public class Casting {
         var truncatedDogs = (int) monthlyDogs;
         System.out.println(truncatedDogs);
         System.out.println((double) 30 / 12);
+
+        char n = 'a';
+        System.out.println((int) n);
     }
 }
