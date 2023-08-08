@@ -21,6 +21,12 @@ public class Functions {
 		return (4/3) * Math.PI * Math.pow(radio, 3);
 	}
 
+	/**
+	 * Convert different kind of currencies to dollars
+	 * @param quantity Money quantity to convert
+	 * @param currency Type of money: COP and MXN
+	 * @return quantity Parse money to the specified currency
+	 */
 	public static double toDollar(double quantity, String currency) {
 		switch (currency) {
 			case "MXN" -> quantity *= 0.052;
