@@ -18,5 +18,14 @@ public class Arrays {
 		names.add("Andres");
 		names.add("Carolina");
 		names.add(1290);
+
+		androidVersions[0] = "Apple Pie";
+		androidVersions[1] = "Banana bread";
+		androidVersions[2] = "Cupcake";
+		androidVersions[3] = "Donut";
+
+		for (int i = 0; i < androidVersions.length; i++) {
+			System.out.println("Adnroid version: " + androidVersions[i]);
+		}
 	}
 }
