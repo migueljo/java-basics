@@ -5,7 +5,15 @@ public class Doctor {
 	String name;
 	String speciality;
 
+	Doctor() {
+		System.out.println("Building doctor object");
+	}
+
+	Doctor(String name) {
+		this.name = name;
+	}
+
 	public void showName() {
-		System.out.println(name);
+		System.out.println("Doctor's name is: " + name);
 	}
 }
