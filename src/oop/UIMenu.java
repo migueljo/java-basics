@@ -3,6 +3,7 @@ package oop;
 import java.util.Scanner;
 
 public class UIMenu {
+	public static String[] months = {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
 	public static void showPatientMenu(){
 		int response = 0;
 		do {
