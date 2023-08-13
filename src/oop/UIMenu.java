@@ -3,7 +3,8 @@ package oop;
 import java.util.Scanner;
 
 public class UIMenu {
-	public static String[] months = {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
+	final public static String[] months = {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
+
 	public static void showPatientMenu(){
 		int response = 0;
 		do {
@@ -17,7 +18,12 @@ public class UIMenu {
 			response = Integer.valueOf(sc.nextLine());
 
 			switch (response) {
-				case 1 -> System.out.println("::Book an appointment");
+				case 1 -> {
+					System.out.println("::Book an appointment");
+					for (int i = 0; i < 4; i++) {
+						System.out.println(i + ". " + months[i]);
+					}
+				}
 				case 2 -> System.out.println("::My appointments");
 				case 0 -> showMenu();
 			}
