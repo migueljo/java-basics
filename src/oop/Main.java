@@ -9,5 +9,7 @@ public class Main {
 		myDoctor.showName();
 		myDoctor.showId();
 		myDoctor2.showId();
+
+		UIMenu.showMenu();
 	}
 }
