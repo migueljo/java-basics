@@ -1,21 +1,17 @@
 package oop;
 
-import javax.print.Doc;
-
 public class Doctor {
 	static int id = 0; // auto-incremented
 	private int instanceId;
 	String name;
 	String speciality;
 
-	Doctor() {
-		System.out.println("Building doctor object");
-		this.instanceId = Doctor.id;
-		Doctor.id++;
-	}
+	Doctor() {}
 
-	Doctor(String name) {
+	Doctor(String name, String speciality) {
+		System.out.println("Building doctor object");
 		this.name = name;
+		this.speciality = speciality;
 		this.instanceId = Doctor.id;
 		Doctor.id++;
 	}
