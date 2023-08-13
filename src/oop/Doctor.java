@@ -5,6 +5,7 @@ public class Doctor {
 	private int instanceId;
 	String name;
 	String speciality;
+	String email;
 
 	Doctor() {}
 
