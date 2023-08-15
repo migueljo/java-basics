@@ -9,7 +9,7 @@ public class Doctor {
 	String name;
 	String speciality;
 	String email;
-	ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
+	private ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
 
 	Doctor() {}
 
