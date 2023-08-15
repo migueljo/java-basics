@@ -1,5 +1,6 @@
 package oop;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Doctor {
@@ -8,6 +9,7 @@ public class Doctor {
 	String name;
 	String speciality;
 	String email;
+	ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
 
 	Doctor() {}
 
@@ -25,6 +27,11 @@ public class Doctor {
 
 	public void showId() {
 		System.out.println("The id is: " + this.instanceId);
+	}
+
+	public void addAvailableAppointment(Date date, String time) {
+		AvailableAppointment appointment = new AvailableAppointment(date, time);
+		this.availableAppointments.add(appointment);
 	}
 
 	public static class AvailableAppointment {
