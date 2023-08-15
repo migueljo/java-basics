@@ -1,5 +1,7 @@
 package oop;
 
+import java.util.Date;
+
 public class Doctor {
 	static int id = 0; // auto-incremented
 	private int instanceId;
@@ -23,5 +25,40 @@ public class Doctor {
 
 	public void showId() {
 		System.out.println("The id is: " + this.instanceId);
+	}
+
+	public static class AvailableAppointment {
+		private int id;
+		private Date date;
+		private String time;
+
+		public AvailableAppointment(Date date, String time) {
+			this.date = date;
+			this.time = time;
+		}
+
+		public int getId() {
+			return id;
+		}
+
+		public void setId(int id) {
+			this.id = id;
+		}
+
+		public Date getDate() {
+			return date;
+		}
+
+		public void setDate(Date date) {
+			this.date = date;
+		}
+
+		public String getTime() {
+			return time;
+		}
+
+		public void setTime(String time) {
+			this.time = time;
+		}
 	}
 }
