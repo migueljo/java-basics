@@ -34,6 +34,10 @@ public class Doctor {
 		this.availableAppointments.add(appointment);
 	}
 
+	public ArrayList<AvailableAppointment> getAvailableAppointments() {
+		return this.availableAppointments;
+	}
+
 	public static class AvailableAppointment {
 		private int id;
 		private Date date;
