@@ -16,6 +16,16 @@ public class Patient {
 		this.email = email;
 	}
 
+	public void testingEnum() {
+		Day day = Day.SUNDAY;
+		switch (day) {
+			case MONDAY -> System.out.println("Mondays are good");
+			case FRIDAY -> System.out.println("Fridays are nice");
+			case SATURDAY, SUNDAY -> System.out.println("Weekends are the best");
+			default -> System.out.println("Midweek are so-so");
+		}
+	}
+
 	public void setWeight(double weight) {
 		this.weight = weight;
 	}
