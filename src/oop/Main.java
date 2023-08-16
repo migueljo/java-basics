@@ -3,7 +3,7 @@ import java.util.Date;
 
 public class Main {
 	public static void main(String[] args) {
-		Doctor myDoctor = new Doctor("Miguel Martínez", "Neurólogo");
+		Doctor myDoctor = new Doctor("Miguel Martínez", "mmartinez@gmail.com", "Neurólogo");
 		myDoctor.addAvailableAppointment(new Date(), "4pm");
 		myDoctor.addAvailableAppointment(new Date(), "5pm");
 		myDoctor.addAvailableAppointment(new Date(), "6pm");

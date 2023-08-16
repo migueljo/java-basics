@@ -3,28 +3,17 @@ package oop;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Doctor {
-	static int id = 0; // auto-incremented
-	private int instanceId;
-	private String name;
+public class Doctor extends User {
+	private String instanceId;
 	private String speciality;
-	private String email;
-	private String address;
-	private String phoneNumber;
 	private ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
 
-	Doctor() {}
+	Doctor(String name, String email, String speciality) {
+		super(name, email);
 
-	Doctor(String name, String speciality) {
 		System.out.println("Building doctor object");
-		this.name = name;
 		this.speciality = speciality;
-		this.instanceId = Doctor.id;
-		Doctor.id++;
-	}
-
-	public void showName() {
-		System.out.println("Doctor's name is: " + name);
+		this.instanceId = super.getId();
 	}
 
 	public void showId() {
