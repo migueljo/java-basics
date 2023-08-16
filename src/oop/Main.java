@@ -14,6 +14,8 @@ public class Main {
 
 		Patient patient = new Patient("Ale", "ale@gmail.com");
 		System.out.println(patient);
+		System.out.println(myDoctor);
+
 		patient.setWeight(85);
 		System.out.println(patient.getWeight());;
 		UIMenu.showMenu();
