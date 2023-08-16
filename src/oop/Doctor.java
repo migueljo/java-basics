@@ -4,20 +4,21 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Doctor extends User {
-	private String instanceId;
 	private String speciality;
 	private ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
 
 	Doctor(String name, String email, String speciality) {
 		super(name, email);
-
 		System.out.println("Building doctor object");
 		this.speciality = speciality;
-		this.instanceId = super.getId();
 	}
 
-	public void showId() {
-		System.out.println("The id is: " + this.instanceId);
+	public String getSpeciality() {
+		return speciality;
+	}
+
+	public void setSpeciality(String speciality) {
+		this.speciality = speciality;
 	}
 
 	public void addAvailableAppointment(Date date, String time) {
