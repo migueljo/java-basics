@@ -6,9 +6,11 @@ import java.util.Date;
 public class Doctor {
 	static int id = 0; // auto-incremented
 	private int instanceId;
-	String name;
-	String speciality;
-	String email;
+	private String name;
+	private String speciality;
+	private String email;
+	private String address;
+	private String phoneNumber;
 	private ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
 
 	Doctor() {}
