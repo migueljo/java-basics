@@ -60,4 +60,6 @@ public abstract class User {
 	public String toString() {
 		return "User: " + this.name + ", Email: " + this.email + ", Address: " + this.address + ", Phone: " + this.phoneNumber;
 	}
+
+	public abstract void showDataUser();
 }
