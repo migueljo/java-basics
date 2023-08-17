@@ -1,4 +1,4 @@
-package oop;
+package oop.model;
 
 public enum Day {
 	MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY;

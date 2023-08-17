@@ -1,4 +1,4 @@
-package oop;
+package oop.model;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -7,7 +7,7 @@ public class Doctor extends User {
 	private String speciality;
 	private ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
 
-	Doctor(String name, String email, String speciality) {
+	public Doctor(String name, String email, String speciality) {
 		super(name, email);
 		System.out.println("Building doctor object");
 		this.speciality = speciality;

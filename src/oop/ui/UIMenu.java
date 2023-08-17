@@ -1,4 +1,4 @@
-package oop;
+package oop.ui;
 
 import java.util.Scanner;
 

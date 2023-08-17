@@ -1,4 +1,4 @@
-package oop;
+package oop.model;
 
 public class User {
 	private String id;

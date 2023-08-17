@@ -1,4 +1,8 @@
 package oop;
+import oop.model.Doctor;
+import oop.model.Patient;
+import oop.ui.UIMenu;
+
 import java.util.Date;
 
 public class Main {
