@@ -1,5 +1,6 @@
 package oop;
 import oop.model.Doctor;
+import oop.model.ISchedulable;
 import oop.model.Patient;
 import oop.model.User;
 import oop.ui.UIMenu;
@@ -17,6 +18,24 @@ public class Main {
 		doctor.showDataUser();
 		User patient0 = new Patient("Mateo", "m@m.com");
 		patient0.showDataUser();
+
+		User user1 = new User("Carmen", "c@c.com") {
+			@Override
+			public void showDataUser() {
+				System.out.println("Doctor");
+				System.out.println("Hospital: Cruz Verde");
+				System.out.println("Departamento: Pediatría");
+			}
+		};
+		user1.showDataUser();
+
+		ISchedulable iSchedulable = new ISchedulable() {
+			@Override
+			public void schedule(Date date, String time) {
+
+			}
+		};
+
 
 		for (Doctor.AvailableAppointment appointment: myDoctor.getAvailableAppointments()) {
 			System.out.println(appointment.getDate() + " :: " + appointment.getTime());
