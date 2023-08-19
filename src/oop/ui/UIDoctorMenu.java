@@ -25,4 +25,8 @@ public class UIDoctorMenu {
 			}
 		} while (response != 0);
 	}
+
+	public static void showAddAvailableAppointmentsMenu() {
+
+	}
 }
