@@ -4,6 +4,7 @@ import oop.model.Doctor;
 import oop.model.Patient;
 
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class UIMenu {
@@ -88,7 +89,19 @@ public class UIMenu {
 			Scanner sc = new Scanner(System.in);
 			String email = sc.nextLine();
 			if (userType == DOCTOR) {
+				for (Doctor doctor: doctors) {
+					if (Objects.equals(doctor.getEmail(), email)) {
+						emailCorrect = true;
+						break;
+					}
+				}
 			} else if (userType == PATIENT) {
+				for (Patient patient : patients) {
+					if (Objects.equals(patient.getEmail(), email)) {
+						emailCorrect = true;
+						break;
+					}
+				}
 			}
 		} while(!emailCorrect);
 	}
