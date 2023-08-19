@@ -20,7 +20,7 @@ public class UIDoctorMenu {
 				case 1 -> {
 					System.out.println("Show available appointments");
 				}
-				case 2 -> System.out.println("Option 2");
+				case 2 -> System.out.println("Option 3");
 				case 3 -> UIMenu.showMenu();
 			}
 		} while (response != 0);
