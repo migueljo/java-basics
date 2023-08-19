@@ -1,5 +1,9 @@
 package oop.ui;
 
+import oop.model.Doctor;
+import oop.model.Patient;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UIMenu {
@@ -44,14 +48,48 @@ public class UIMenu {
 			response = Integer.valueOf(sc.nextLine());
 
 			switch (response) {
-				case 1 -> System.out.println("Doctor");
+				case 1 -> {
+					response = 0;
+					System.out.println("Doctor");
+					authUser(1);
+				}
 				case 2 -> {
 					response = 0;
-					showPatientMenu();
+					System.out.println("Patient");
+					authUser(2);
 				}
 				case 0 -> System.out.println("Thank you for you visit");
 				default -> System.out.println("Please select a correct answer");
 			}
 		} while (response != 0);
+	}
+
+	private static void authUser(int userType) {
+		// userType = 1 -> Doctor
+		// userType = 2 -> Patient
+		var DOCTOR = 1;
+		var PATIENT = 2;
+
+
+		ArrayList<Doctor> doctors = new ArrayList<Doctor>();
+		doctors.add(new Doctor("Miguel Martínez", "m@m.com", "Neurología"));
+		doctors.add(new Doctor("Andrés Martínez", "c@c.com", "Pediatra"));
+		doctors.add(new Doctor("Carolina Martínez", "c@c.com", "Oncología"));
+
+		ArrayList<Patient> patients = new ArrayList<Patient>();
+		patients.add(new Patient("Julian", "j@j.com"));
+		patients.add(new Patient("Alvaro", "a@a.com"));
+		patients.add(new Patient("Federico", "f@f.com"));
+
+		boolean emailCorrect = false;
+
+		do {
+			System.out.println("Insert your email: [a@a.com]");
+			Scanner sc = new Scanner(System.in);
+			String email = sc.nextLine();
+			if (userType == DOCTOR) {
+			} else if (userType == PATIENT) {
+			}
+		} while(!emailCorrect);
 	}
 }
