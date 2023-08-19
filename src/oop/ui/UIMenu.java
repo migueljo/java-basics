@@ -9,6 +9,10 @@ import java.util.Scanner;
 
 public class UIMenu {
 	final public static String[] MONTHS = {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
+	final private static int DOCTOR = 1;
+	final private static int PATIENT = 2;
+	public static Doctor doctorLogged;
+	public static Patient patientLogged;
 
 	public static void showPatientMenu(){
 		int response = 0;
@@ -66,12 +70,6 @@ public class UIMenu {
 	}
 
 	private static void authUser(int userType) {
-		// userType = 1 -> Doctor
-		// userType = 2 -> Patient
-		var DOCTOR = 1;
-		var PATIENT = 2;
-
-
 		ArrayList<Doctor> doctors = new ArrayList<Doctor>();
 		doctors.add(new Doctor("Miguel Martínez", "m@m.com", "Neurología"));
 		doctors.add(new Doctor("Andrés Martínez", "c@c.com", "Pediatra"));
@@ -88,17 +86,19 @@ public class UIMenu {
 			System.out.println("Insert your email: [a@a.com]");
 			Scanner sc = new Scanner(System.in);
 			String email = sc.nextLine();
-			if (userType == DOCTOR) {
+			if (userType == UIMenu.DOCTOR) {
 				for (Doctor doctor: doctors) {
 					if (Objects.equals(doctor.getEmail(), email)) {
 						emailCorrect = true;
+						UIMenu.doctorLogged = doctor;
 						break;
 					}
 				}
-			} else if (userType == PATIENT) {
+			} else if (userType == UIMenu.PATIENT) {
 				for (Patient patient : patients) {
 					if (Objects.equals(patient.getEmail(), email)) {
 						emailCorrect = true;
+						UIMenu.patientLogged = patient;
 						break;
 					}
 				}
