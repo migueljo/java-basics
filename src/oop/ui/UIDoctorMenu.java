@@ -10,8 +10,6 @@ public class UIDoctorMenu {
 	public static void showDoctorMenu() {
 		var response = 0;
 		do {
-			System.out.println("\n\n");
-			System.out.println("Doctor");
 			System.out.println("Welcome " + UIMenu.doctorLogged.getName());
 			System.out.println("1. Add available appointment");
 			System.out.println("2. My scheduled appointments");
@@ -23,6 +21,7 @@ public class UIDoctorMenu {
 			switch (response) {
 				case 1 -> {
 					System.out.println("Show available appointments");
+					showAddAvailableAppointmentsMenu();
 				}
 				case 2 -> System.out.println("Option 3");
 				case 3 -> UIMenu.showMenu();
@@ -45,7 +44,7 @@ public class UIDoctorMenu {
 			selectedMonth = Integer.parseInt(sc.nextLine());
 
 			if (selectedMonth > 0 && selectedMonth < 4) {
-				System.out.println(selectedMonth + " -> " + UIMenu.MONTHS[selectedMonth]);
+				System.out.println(selectedMonth + " -> " + UIMenu.MONTHS[selectedMonth - 1]);
 				System.out.println("Insert the available date: [dd/mm/yyyy]");
 				String date = sc.nextLine();
 				System.out.println("Your date is: " + date + "\n1. Correct \n2.Change date");
