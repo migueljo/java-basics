@@ -54,6 +54,28 @@ public class UIPatientMenu {
 
 			Scanner sc = new Scanner(System.in);
 			int responseDateSelected = Integer.parseInt(sc.nextLine());
+
+			Map<Integer, Doctor> doctorAvailableSelected = doctors.get(responseDateSelected);
+			var indexDate = 0;
+			Doctor doctorSelected = new Doctor("", "", "");
+			for (Map.Entry<Integer, Doctor> doc: doctorAvailableSelected.entrySet()) {
+				indexDate = doc.getKey();
+				doctorSelected = doc.getValue();
+			}
+
+			System.out.println(
+							doctorSelected.getName() +
+											". Date: " + doctorSelected.getAvailableAppointments().get(indexDate).getDate() +
+											". Time: " + doctorSelected
+											.getAvailableAppointments()
+											.get(indexDate)
+											.getTime());
+
+			System.out.println("Confirm your appointment: \n1. Yes \n2. Change data");
+			response = Integer.parseInt(sc.nextLine());
+			if (response == 1) {
+
+			}
 		} while (response != 0);
 	}
 }
