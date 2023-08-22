@@ -1,6 +1,12 @@
 package oop.ui;
 
+import oop.model.Doctor;
+
+import javax.print.Doc;
+import java.util.ArrayList;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.TreeMap;
 
 public class UIPatientMenu {
 	public static void showPatientMenu() {
@@ -28,6 +34,26 @@ public class UIPatientMenu {
 		do {
 			System.out.println(":: Book an appointment");
 			System.out.println(":: Select a date");
+
+			Map<Integer, Map<Integer, Doctor>> doctors = new TreeMap<>();
+			var k = 0;
+			for (int i = 0; i < UIDoctorMenu.doctorsAvailableAppointments.size(); i++) {
+				ArrayList<Doctor.AvailableAppointment> availableAppointments = UIDoctorMenu
+								.doctorsAvailableAppointments
+								.get(i)
+								.getAvailableAppointments();
+				
+				Map<Integer, Doctor> doctorAppointments = new TreeMap<>();
+				for (int j = 0; j < availableAppointments.size(); j++) {
+					k++;
+					System.out.println(k + ". " + availableAppointments.get(j).getDate());
+					doctorAppointments.put(j, UIDoctorMenu.doctorsAvailableAppointments.get(i));
+					doctors.put(k, doctorAppointments);
+				}
+			}
+
+			Scanner sc = new Scanner(System.in);
+			int responseDateSelected = Integer.parseInt(sc.nextLine());
 		} while (response != 0);
 	}
 }
