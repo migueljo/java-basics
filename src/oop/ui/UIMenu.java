@@ -100,6 +100,7 @@ public class UIMenu {
 					if (Objects.equals(patient.getEmail(), email)) {
 						emailCorrect = true;
 						UIMenu.patientLogged = patient;
+						UIPatientMenu.showPatientMenu();
 						break;
 					}
 				}

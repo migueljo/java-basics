@@ -23,7 +23,7 @@ public class UIPatientMenu {
 
 			switch (response) {
 				case 1 -> showBookAppointmentMenu();
-				case 2 -> System.out.println("2");
+				case 2 -> showPatientMyAppointments();
 				case 0 -> UIMenu.showMenu();
 			}
 		} while(response != 0);
