@@ -10,14 +10,16 @@ public final class ImmutablePerson {
 	public ImmutablePerson(String firstName, String lastName, List<String> emails) {
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.emails = emails;
+		this.emails = new LinkedList<>(emails);
 	}
 
 	public String getFirstName() { return firstName;}
 
 	public String getLastName() { return lastName; }
 
-	public final List<String> getEmails() { return new LinkedList<>(emails); }
+	public final List<String> getEmails() {
+		return new LinkedList<>(emails);
+	}
 
 	@Override
 	public String toString() {

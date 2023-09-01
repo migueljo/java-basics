@@ -14,6 +14,7 @@ public class Outsider {
 		ImmutablePerson miguel = new ImmutablePerson(firstName, lastName, emails);
 		System.out.println(miguel);
 		badFunction(miguel);
+		emails.add("spam0@gmail.com");
 		System.out.println(miguel);
 	}
 
