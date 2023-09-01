@@ -33,4 +33,9 @@ public class MutablePerson {
 	public void setEmails(List<String> emails) {
 		this.emails = emails;
 	}
+
+	@Override
+	public String toString() {
+		return "First name: " + firstName + ", Last name: " + lastName + ", Emails: " + emails;
+	}
 }
