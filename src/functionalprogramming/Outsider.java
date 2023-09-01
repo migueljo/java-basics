@@ -5,23 +5,21 @@ import java.util.List;
 
 public class Outsider {
 	public static void main(String[] args) {
-		List<String> miguelEmails = new LinkedList<>();
-		miguelEmails.add("m@m.com");
+		String firstName = "Miguel";
+		String lastName = "Martínez";
+		LinkedList<String> emails = new LinkedList<>();
+		emails.add("m@m.com");
+		emails.add("m2@m.com");
 
-		MutablePerson miguel = new MutablePerson();
-		miguel.setEmails(miguelEmails);
-		miguel.setFirstName("Miguel");
-		miguel.setLastName("Martínez");
-
+		ImmutablePerson miguel = new ImmutablePerson(firstName, lastName, emails);
 		System.out.println(miguel);
 		badFunction(miguel);
 		System.out.println(miguel);
 	}
 
-	static void badFunction(MutablePerson person) {
-		List<String> otherEmails = new LinkedList<>();
-		otherEmails.add("a@a.com");
-		otherEmails.add("a2@a.com");
-		person.setEmails(otherEmails);
+	static void badFunction(ImmutablePerson person) {
+		List<String> emails = person.getEmails();
+		emails.clear();
+		emails.add("spam@gmail.com");
 	}
 }

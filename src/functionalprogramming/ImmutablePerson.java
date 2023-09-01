@@ -17,7 +17,7 @@ public final class ImmutablePerson {
 
 	public String getLastName() { return lastName; }
 
-	public final List<String> getEmail() { return new LinkedList<>(emails); }
+	public final List<String> getEmails() { return new LinkedList<>(emails); }
 
 	@Override
 	public String toString() {
