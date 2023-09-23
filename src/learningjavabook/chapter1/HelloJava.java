@@ -1,4 +1,4 @@
-package learningjavabook;
+package learningjavabook.chapter1;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,7 +15,8 @@ public class HelloJava {
 		int y = (screenSize.height / 2) - (height / 2);
 		Rectangle frameBounds = new Rectangle(x, y, width, height);
 
-		frame.add(label);
+		frame.add(new HelloComponent());
+		// frame.add(label);
 		frame.setBounds(frameBounds);
 		frame.setVisible(true);
 	}
