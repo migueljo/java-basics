@@ -1,2 +1,4 @@
-package learningjavabook.chapter1;public class HelloJava2 {
+package learningjavabook.chapter1;
+
+public class HelloJava2 {
 }
