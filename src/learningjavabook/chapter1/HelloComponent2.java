@@ -6,18 +6,18 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
 
 class HelloComponent2 extends JComponent implements MouseMotionListener {
-	String theMessage;
+	String message;
 	int messageX = 125;
 	int messageY = 95;
 
 	public HelloComponent2(String message) {
-		this.theMessage = message;
+		this.message = message;
 		this.addMouseMotionListener(this);
 	}
 
 	@Override
 	protected void paintComponent(Graphics g) {
-		g.drawString(theMessage, messageX, messageY);
+		g.drawString(message, messageX, messageY);
 	}
 
 	@Override
