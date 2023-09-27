@@ -8,7 +8,7 @@ import java.awt.event.MouseMotionListener;
 public class HelloJava2 {
 	public static void main(String[] args) {
 		JFrame frame = new JFrame("HelloJava2");
-		String label = args.length > 0 ? args[0] : "Hello world again 😁";
+		String label = args.length > 0 ? args[0] : "Hello world again 😁 \uD83D\uDE00";
 
 		frame.add(new HelloComponent2(label));
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
