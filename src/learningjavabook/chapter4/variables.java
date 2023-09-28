@@ -43,5 +43,11 @@ public class variables {
 		float f = 8.31F;
 		float g = 3.00e+8F;
 		float pi = 3.14_159_265_358f;
+
+		// Character literals
+		char a = 'a';
+		char newline = '\n';
+		char smiley = '\u263a';
+		System.out.println(a + "" + newline + smiley);
 	}
 }
