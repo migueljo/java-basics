@@ -23,5 +23,11 @@ public class variables {
 		byte b = 42;
 		int integer = 43;
 		int result = b * integer; // b is promoted to int before multiplication
+
+		// Down promoting
+		// byte b2 = integer; // Error
+		int integer2 = 10000;
+		byte b2 = (byte) integer2;
+		System.out.println(b2);
 	}
 }
