@@ -36,5 +36,12 @@ public class variables {
 		int JAVA_ID = 0xCAFE_BABE;
 		long grandTotal = 40_123_456_789L;
 		System.out.println(RICHARD_NIXONS_SSN + ", " + for_no_reason + ", " + JAVA_ID + ", " + grandTotal);
+
+		// Floating point literals
+		double doubleN = 8.31;
+		double e = 3.00e+8;
+		float f = 8.31F;
+		float g = 3.00e+8F;
+		float pi = 3.14_159_265_358f;
 	}
 }
