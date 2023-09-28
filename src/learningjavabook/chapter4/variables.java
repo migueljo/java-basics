@@ -13,5 +13,10 @@ public class variables {
 		int octal = 01230; // 664 in decimal
 		// Hexadecimal numbers begin with 0x OR 0X
 		int hexadecimal = 0xFFFF; // 65535 in decimal
+
+		// Long numbers
+		long l = 13L;
+		l = 13;
+		l = 40000000000L;
 	}
 }
