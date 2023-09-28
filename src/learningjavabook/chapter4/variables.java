@@ -9,6 +9,8 @@ public class variables {
 		int i = 1230;
 		// Binary numbers begin with 0b or 0B
 		int binary = 0b01001011; // 75 in decimal
-		//
+		// Octal numbers begin with 0
+		int octal = 01230; // 664 in decimal
+		
 	}
 }
