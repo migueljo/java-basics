@@ -18,5 +18,10 @@ public class variables {
 		long l = 13L;
 		l = 13;
 		l = 40000000000L;
+
+		// Promotion
+		byte b = 42;
+		int integer = 43;
+		int result = b * integer; // b is promoted to int before multiplication
 	}
 }
