@@ -47,7 +47,7 @@ public class variables {
 		// Character literals
 		char a = 'a';
 		char newline = '\n';
-		char smiley = '\u263a';
+		char smiley = '☺';
 		System.out.println(a + "" + newline + smiley);
 	}
 }
