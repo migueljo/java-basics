@@ -31,11 +31,11 @@ public class variables {
 		System.out.println(b2);
 
 		// _ separator
-		int RICHARD_NIXONS_SSN = 567_68_0515;
+		int RICHARD_NIXON_SSN = 567_68_0515;
 		int for_no_reason = 1___2___3;
 		int JAVA_ID = 0xCAFE_BABE;
 		long grandTotal = 40_123_456_789L;
-		System.out.println(RICHARD_NIXONS_SSN + ", " + for_no_reason + ", " + JAVA_ID + ", " + grandTotal);
+		System.out.println(RICHARD_NIXON_SSN + ", " + for_no_reason + ", " + JAVA_ID + ", " + grandTotal);
 
 		// Floating point literals
 		double doubleN = 8.31;
