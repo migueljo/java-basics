@@ -11,5 +11,10 @@ public class EnhancedForLoop {
 		intsArrayList.add(70);
 		intsArrayList.add(80);
 		for(Integer number: intsArrayList) System.out.println("Number: " + number);
+
+		int i, j;
+		i = 5; // Assignment is an expression and a statement
+		j = (i = 7);
+		System.out.println(i + " : " + j);
 	}
 }
