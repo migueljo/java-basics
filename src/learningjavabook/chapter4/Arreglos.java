@@ -53,6 +53,9 @@ public class Arreglos {
 		System.out.println("Numbers: " + join(barCopy));
 		byte[] expanded = Arrays.copyOf(bar, bar.length + 2);
 		System.out.println("Expanded: " + join(expanded));
+
+		byte[] firstThree = Arrays.copyOfRange(bar, 0, 3);
+		System.out.println("Range from 0 to 3: " + join(firstThree));
 	}
 
 	static String join(byte[] numbers) {
