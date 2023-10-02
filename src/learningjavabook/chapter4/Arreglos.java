@@ -1,8 +1,9 @@
 package learningjavabook.chapter4;
 
 import java.awt.*;
+import java.util.Arrays;
 
-public class Arrays {
+public class Arreglos {
 	public static void main(String[] args) {
 		int arrayOfInts[]; // c styled
 		int[] arrayOfInts2; // preferred
@@ -39,11 +40,26 @@ public class Arrays {
 			keypad[i] = new Button(Integer.toString(i));
 		}
 
+		// System.arraycopy
 		String[] tmpVar = new String[2 * names.length];
 		System.arraycopy(names, 0, tmpVar, 0, names.length);
 
 		for (String variable : tmpVar) {
 			System.out.println("Copied value: " + variable);
 		}
+		// java.util.Arreglos.copyOf
+		byte[] bar = new byte[] {1, 2, 3, 4, 5};
+		byte[] barCopy = Arrays.copyOf(bar, bar.length);
+		System.out.println("Numbers: " + join(barCopy));
+		byte[] expanded = Arrays.copyOf(bar, bar.length + 2);
+		System.out.println("Expanded: " + join(expanded));
+	}
+
+	static String join(byte[] numbers) {
+		String barString = "";
+		for (byte n: numbers) {
+			barString += " " + n;
+		}
+		return barString.trim();
 	}
 }
