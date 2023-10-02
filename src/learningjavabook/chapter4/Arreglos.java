@@ -56,6 +56,12 @@ public class Arreglos {
 
 		byte[] firstThree = Arrays.copyOfRange(bar, 0, 3);
 		System.out.println("Range from 0 to 3: " + join(firstThree));
+
+		byte[] lastNumbers = Arrays.copyOfRange(bar, 2, bar.length);
+		System.out.println("Last numbers: " + join(lastNumbers));
+
+		byte[] lastNumbersPlus2 = Arrays.copyOfRange(bar, 2, bar.length + 2);
+		System.out.println("Last numbers plus 2: " + join(lastNumbersPlus2));
 	}
 
 	static String join(byte[] numbers) {
