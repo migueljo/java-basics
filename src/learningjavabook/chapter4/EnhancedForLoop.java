@@ -16,5 +16,12 @@ public class EnhancedForLoop {
 		i = 5; // Assignment is an expression and a statement
 		j = (i = 7);
 		System.out.println(i + " : " + j);
+
+		String s = null;
+		if (s instanceof String) {
+			System.out.println("String: " + s);
+		} else {
+			System.out.println("S is not instance of String");
+		}
 	}
 }
