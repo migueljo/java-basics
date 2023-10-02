@@ -33,5 +33,10 @@ public class Arrays {
 		// The following 2 assignments are equivalent
 		Button [] threeButtons = new Button [3];
 		Button [] threeButtons2 = { null, null, null };
+
+		Button[] keypad = new Button[10];
+		for (int i = 0; i < keypad.length; i++) {
+			keypad[i] = new Button(Integer.toString(i));
+		}
 	}
 }
