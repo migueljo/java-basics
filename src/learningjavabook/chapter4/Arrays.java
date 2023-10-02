@@ -19,10 +19,10 @@ public class Arrays {
 			System.out.println("Double: " + someNumbers[i]);
 		}
 
-		String names [] = new String [4]; names [0] = new String();
+		String names [] = new String [4];
+		names [0] = new String();
 		names [1] = "Walla Walla";
 		names [2] = someStrings.toString();
-		// names[3] == null
 
 		int[] primes = { 2, 3, 5, 7, 7+4 }; // C-style arrays
 
@@ -37,6 +37,13 @@ public class Arrays {
 		Button[] keypad = new Button[10];
 		for (int i = 0; i < keypad.length; i++) {
 			keypad[i] = new Button(Integer.toString(i));
+		}
+
+		String[] tmpVar = new String[2 * names.length];
+		System.arraycopy(names, 0, tmpVar, 0, names.length);
+
+		for (String variable : tmpVar) {
+			System.out.println("Copied value: " + variable);
 		}
 	}
 }
