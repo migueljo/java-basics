@@ -23,5 +23,15 @@ public class Arrays {
 		names [1] = "Walla Walla";
 		names [2] = someStrings.toString();
 		// names[3] == null
+
+		int[] primes = { 2, 3, 5, 7, 7+4 }; // C-style arrays
+
+		String[] verbs = {"Saltar", "Cocinar"};
+		Button[] buttons = {new Button("stop")};
+		Object[] random = {2.3, "Miguel", new Button("start")};
+
+		// The following 2 assignments are equivalent
+		Button [] threeButtons = new Button [3];
+		Button [] threeButtons2 = { null, null, null };
 	}
 }
