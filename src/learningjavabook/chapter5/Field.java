@@ -1,2 +1,4 @@
-package learningjavabook.chapter5;public class Field {
+package learningjavabook.chapter5;
+
+public class Field {
 }
