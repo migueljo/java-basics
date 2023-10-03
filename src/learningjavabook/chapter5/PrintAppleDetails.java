@@ -2,12 +2,12 @@ package learningjavabook.chapter5;
 
 public class PrintAppleDetails {
 	public static void main(String[] args) {
-		Apple a1 = new Apple();
-		a1.printDetails();
-
-		a1.mass = 10;
-		a1.x = 20;
-		a1.y = 40;
-		a1.printDetails();
+		Field f = new Field();
+		f.setupApples();
+		System.out.println("Apple a1:");
+		f.a1.printDetails();
+		System.out.println("Apple a2:");
+		f.a2.printDetails();
+		f.detectCollisions();
 	}
 }
