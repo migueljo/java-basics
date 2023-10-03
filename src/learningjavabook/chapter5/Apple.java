@@ -5,7 +5,11 @@ public class Apple {
 	float diameter = 1.0f;
 	int x, y;
 	boolean isTouching(Apple other) {
-		return true;
+		double xdiff = this.x - other.x;
+		double ydiff = this.y - other.y;
+		double distance = Math.sqrt(xdiff * xdiff + ydiff * ydiff);
+
+		return distance < ((diameter / 2) + (other.diameter / 2));
 	}
 
 	public void printDetails() {
