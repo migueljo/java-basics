@@ -5,11 +5,11 @@ public class Field {
 	Apple a2 = new Apple();
 
 	public void setupApples() {
-		a1.diameter = 3.0f;
+		a1.setDiameter(3.0f);
 		a1.mass = 5.0f;
 		a1.x = 67;
 		a1.y = 197;
-		a2.diameter = 8.0f;
+		a2.setDiameter(8.0f);
 		a2.mass = 10.0f;
 		a2.x = 70;
 		a2.y = 200;

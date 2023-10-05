@@ -2,7 +2,7 @@ package learningjavabook.chapter5;
 
 public class Apple {
 	float mass;
-	float diameter = 1.0f;
+	private float diameter = 1.0f;
 	int x, y;
 	boolean isTouching(Apple other) {
 		double xdiff = this.x - other.x;
@@ -17,5 +17,13 @@ public class Apple {
 		System.out.println("  mass: " + this.mass);
 		System.out.println("  diameter: " + this.diameter);
 		System.out.println("  position: (" + this.x + ", " + this.y +")");
+	}
+
+	public float getDiameter() {
+		return diameter;
+	}
+
+	public void setDiameter(float diameter) {
+		this.diameter = diameter;
 	}
 }
