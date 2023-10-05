@@ -1,9 +1,15 @@
 package learningjavabook.chapter5;
 
 public class Apple {
+	final static float EARTH_ACCELERATION = 9.8f;
 	float mass;
 	private float diameter = 1.0f;
 	int x, y;
+
+	float getWeight() {
+		return mass * EARTH_ACCELERATION;
+	}
+
 	boolean isTouching(Apple other) {
 		double xdiff = this.x - other.x;
 		double ydiff = this.y - other.y;
