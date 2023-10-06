@@ -21,6 +21,10 @@ public class Apple {
 		}
 	}
 
+	public static String[] getAppleSizes() {
+		return new String[] { "SMALL", "MEDIUM", "LARGE" };
+	}
+
 	boolean isTouching(Apple other) {
 		double xdiff = this.x - other.x;
 		double ydiff = this.y - other.y;
