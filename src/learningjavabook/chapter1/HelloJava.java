@@ -5,7 +5,7 @@ import java.awt.*;
 
 public class HelloJava {
 	public static void main(String[] args) {
-		JFrame frame = new JFrame("Hello Java!");
+		JFrame frame = new javax.swing.JFrame("Hello Java!");
 		JLabel label = new JLabel("Hello Java!", JLabel.CENTER);
 		Toolkit toolkit = Toolkit.getDefaultToolkit();
 		Dimension screenSize = toolkit.getScreenSize();
@@ -16,7 +16,6 @@ public class HelloJava {
 		Rectangle frameBounds = new Rectangle(x, y, width, height);
 
 		frame.add(new HelloComponent());
-		// frame.add(label);
 		frame.setBounds(frameBounds);
 		frame.setVisible(true);
 	}
