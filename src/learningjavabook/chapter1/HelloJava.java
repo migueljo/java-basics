@@ -6,7 +6,6 @@ import java.awt.*;
 public class HelloJava {
 	public static void main(String[] args) {
 		JFrame frame = new javax.swing.JFrame("Hello Java!");
-		JLabel label = new JLabel("Hello Java!", JLabel.CENTER);
 		Toolkit toolkit = Toolkit.getDefaultToolkit();
 		Dimension screenSize = toolkit.getScreenSize();
 		var width = 300;
