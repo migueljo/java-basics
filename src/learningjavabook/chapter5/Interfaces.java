@@ -5,21 +5,24 @@ public class Interfaces {
 }
 
 interface Drivable {
-	boolean startEnging();
+	boolean startEngine();
 	void stopEngine();
 	float accelerate(float acc);
 	boolean turn(String dir);
 }
 
 class Automobile implements Drivable {
+	boolean engineRunning;
 	@Override
-	public boolean startEnging() {
-		return false;
+	public boolean startEngine() {
+
+		engineRunning = true;
+		return engineRunning;
 	}
 
 	@Override
 	public void stopEngine() {
-
+		engineRunning = false;
 	}
 
 	@Override
