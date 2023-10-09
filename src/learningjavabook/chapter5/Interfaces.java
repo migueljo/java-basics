@@ -1,7 +1,8 @@
 package learningjavabook.chapter5;
 
 public class Interfaces {
-
+	Automobile automobile = new Automobile();
+	Lawnmower lawnmower = new Lawnmower();
 }
 
 interface Drivable {
@@ -23,6 +24,28 @@ class Automobile implements Drivable {
 	@Override
 	public void stopEngine() {
 		engineRunning = false;
+	}
+
+	@Override
+	public float accelerate(float acc) {
+		return 0;
+	}
+
+	@Override
+	public boolean turn(String dir) {
+		return false;
+	}
+}
+
+class Lawnmower implements Drivable {
+	@Override
+	public boolean startEngine() {
+		return false;
+	}
+
+	@Override
+	public void stopEngine() {
+
 	}
 
 	@Override
