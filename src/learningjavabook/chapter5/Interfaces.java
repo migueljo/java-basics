@@ -3,6 +3,8 @@ package learningjavabook.chapter5;
 public class Interfaces {
 	Automobile automobile = new Automobile();
 	Lawnmower lawnmower = new Lawnmower();
+	Drivable vehicle;
+	// TODO: Can't use vehicle.startEngine, why?
 }
 
 interface Drivable {
