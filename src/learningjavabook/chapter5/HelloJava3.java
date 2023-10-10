@@ -17,6 +17,7 @@ public class HelloJava3 extends JFrame {
 		add(text);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(300, 300);
+		setVisible(true);
 	}
 
 	class HelloComponent3 extends JComponent {
@@ -37,7 +38,7 @@ public class HelloJava3 extends JFrame {
 		}
 
 		@Override
-		public void paintComponents(Graphics g) {
+		public void paintComponent(Graphics g) {
 			g.drawString(theMessage, messageX, messageY);
 		}
 	}
