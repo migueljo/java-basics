@@ -14,6 +14,7 @@ public class Euclid {
 			} catch (Exception e) {
 				System.out.println("Arguments were not both numbers. Using defaults.");
 			}
+			// catch(ZipException | SSLException e) is also valid
 		} else {
 			System.out.println("Wrong number of arguments (expected 2). Using defaults.");
 		}
