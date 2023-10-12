@@ -9,8 +9,10 @@ public class Euclid {
 			try {
 				a = Integer.parseInt(args[0]);
 				b = Integer.parseInt(args[1]);
+			} catch (NumberFormatException e) {
+				System.out.println("Arguments were not both numbers. Using defaults.");
 			} catch (Exception e) {
-				System.out.println("Arguments were not both numbers. Using  defaults.");
+				System.out.println("Arguments were not both numbers. Using defaults.");
 			}
 		} else {
 			System.out.println("Wrong number of arguments (expected 2). Using defaults.");
