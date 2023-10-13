@@ -10,6 +10,16 @@ public class Exceptions {
 			System.out.println("ParseException caught");
 		}
 	}
+
+	void myMethod() {
+		int foo;
+		try {
+			foo = 4;
+		} catch (Exception e) {
+
+		}
+		// System.out.println(foo); foo can't be used here because it may not have been initialized due to the try catch block
+	}
 }
 
 class ParseException extends Exception {
