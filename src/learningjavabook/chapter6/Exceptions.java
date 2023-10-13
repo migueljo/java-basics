@@ -16,9 +16,18 @@ public class Exceptions {
 		try {
 			foo = 4;
 		} catch (Exception e) {
-
 		}
 		// System.out.println(foo); foo can't be used here because it may not have been initialized due to the try catch block
+	}
+
+	void myMethod2() {
+		int foo;
+		try {
+			foo = 4;
+		} catch (Exception e) {
+			return;
+		}
+		System.out.println(foo); // This is ok because of the return statement inside the catch block
 	}
 }
 
