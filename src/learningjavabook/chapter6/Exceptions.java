@@ -9,6 +9,8 @@ public class Exceptions {
 		} catch (ParseException e) {
 			System.out.println("ParseException caught");
 		}
+		// tryFinally();
+		tryCatchFinally();
 	}
 
 	void myMethod() {
@@ -28,6 +30,29 @@ public class Exceptions {
 			return;
 		}
 		System.out.println(foo); // This is ok because of the return statement inside the catch block
+	}
+
+	static void tryFinally() {
+		try {
+			System.out.println("Inside try block");
+			return;
+		} finally {
+			System.out.println("Inside finally block");
+		}
+	}
+
+	static void tryCatchFinally() {
+		try {
+			System.out.println("Inside try block");
+			if (3 == 3) {
+				throw new Exception("Testing try catch finally");
+			}
+		} catch (Exception e) {
+			System.out.println("Catch block: " + e.getMessage());
+			return;
+		} finally {
+			System.out.println("Inside finally block...");
+		}
 	}
 }
 
