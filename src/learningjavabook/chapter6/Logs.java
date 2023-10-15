@@ -9,5 +9,6 @@ public class Logs {
 		log.info("Hello from Logs.java 2");
 		log.warning("Showing warning");
 		Logger.getGlobal().info("Show info with global logger");
+		Logger.getGlobal().warning("Show info with global logger");
 	}
 }
