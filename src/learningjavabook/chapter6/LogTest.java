@@ -3,8 +3,9 @@ package learningjavabook.chapter6;
 import java.util.logging.Logger;
 
 public class LogTest {
+	static Logger logger = Logger.getLogger("learningjavabook.chapter6.LogTest");
+
 	public static void main(String[] args) {
-		Logger logger = Logger.getLogger("learningjavabook.chapter6.LogTest");
 		logger.severe("Power lost - running on backup!");
 		logger.warning("Database connection lost, retrying...");
 		logger.info("Startup complete.");
