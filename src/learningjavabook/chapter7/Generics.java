@@ -18,6 +18,8 @@ public class Generics {
 		employeesMap.put(bobsId, bob);
 
 		System.out.println(employeesMap);
+		Employee employee = employeesMap.get(bobsId);
+		System.out.println(employee);
 	}
 }
 
