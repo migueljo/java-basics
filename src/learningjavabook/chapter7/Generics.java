@@ -1,9 +1,6 @@
 package learningjavabook.chapter7;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Generics {
 	public static void main(String[] args) {
@@ -20,6 +17,10 @@ public class Generics {
 		System.out.println(employeesMap);
 		Employee employee = employeesMap.get(bobsId);
 		System.out.println(employee);
+
+		List<Date> dateList = new ArrayList<>();
+		System.out.println(dateList instanceof List);
+		dateList.add(new Date());
 	}
 }
 
