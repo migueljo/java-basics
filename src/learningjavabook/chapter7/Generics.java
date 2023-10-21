@@ -21,6 +21,13 @@ public class Generics {
 		List<Date> dateList = new ArrayList<>();
 		System.out.println(dateList instanceof List);
 		dateList.add(new Date());
+		System.out.println(dateList instanceof List<Date>);
+
+		List list = new ArrayList();
+		list.add("Foo");
+		list.add(200);
+		String first = (String) list.get(1);
+		// first.trim(); // This will throw
 	}
 }
 
