@@ -34,3 +34,8 @@ public class Generics {
 class Employee {
 	String name = "Employee name";
 }
+
+// Generics can be bound to a specific Class and its sub types
+class Bounded<E extends Date> {
+	public void addElement(Date element) {}
+}
