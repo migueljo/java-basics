@@ -35,6 +35,10 @@ public class Generics {
 		Collection<Date> cd;
 		List<Date> ld = new ArrayList<>();
 		cd = ld;
+
+		List<Object> lo;
+		List<Date> ld2 = new ArrayList<Date>();
+		// lo = ld2; // This will throw an error
 	}
 }
 
