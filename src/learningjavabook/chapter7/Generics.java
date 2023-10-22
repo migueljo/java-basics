@@ -43,6 +43,9 @@ public class Generics {
 		Collection<Number> cn;
 		List<Integer> li = new ArrayList<>();
 		// cn = li; // This will throw - incompatible types
+
+		List list3 = new ArrayList<Date>();
+		List<Date> ld3 = list;
 	}
 }
 
