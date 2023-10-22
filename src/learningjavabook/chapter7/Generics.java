@@ -49,6 +49,10 @@ public class Generics {
 
 		Collection<Date> cd1 = new ArrayList<Date>();
 		List<Date> ld1 = (List<Date>) cd;
+
+		Collection<Date> cd2 = new TreeSet<Date>();
+		List<Date> ld4 = (List<Date>) cd;
+		ld.add(new Date());
 	}
 }
 
