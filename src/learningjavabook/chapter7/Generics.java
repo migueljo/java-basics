@@ -53,6 +53,14 @@ public class Generics {
 		Collection<Date> cd2 = new TreeSet<Date>();
 		List<Date> ld4 = (List<Date>) cd;
 		ld.add(new Date());
+
+		Object o = new ArrayList<String>();
+		List<Date> ld5 = (List<Date>) o;
+		// Date d = ld5.add(0); // This will throw error
+	}
+
+	public static void collectionsToArrays() {
+
 	}
 }
 
