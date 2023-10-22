@@ -28,6 +28,9 @@ public class Generics {
 		list.add(200);
 		String first = (String) list.get(1);
 		// first.trim(); // This will throw
+
+		List list1 = new ArrayList<Date>();
+		List<Date> list2 = new ArrayList<>();
 	}
 }
 
