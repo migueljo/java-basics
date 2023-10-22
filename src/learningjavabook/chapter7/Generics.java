@@ -46,6 +46,9 @@ public class Generics {
 
 		List list3 = new ArrayList<Date>();
 		List<Date> ld3 = list;
+
+		Collection<Date> cd1 = new ArrayList<Date>();
+		List<Date> ld1 = (List<Date>) cd;
 	}
 }
 
