@@ -31,6 +31,10 @@ public class Generics {
 
 		List list1 = new ArrayList<Date>();
 		List<Date> list2 = new ArrayList<>();
+
+		Collection<Date> cd;
+		List<Date> ld = new ArrayList<>();
+		cd = ld;
 	}
 }
 
