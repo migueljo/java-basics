@@ -26,7 +26,7 @@ public class Generics {
 		List list = new ArrayList();
 		list.add("Foo");
 		list.add(200);
-		String first = (String) list.get(1);
+		// String first = (String) list.get(1); // This will throw
 		// first.trim(); // This will throw
 
 		List list1 = new ArrayList<Date>();
@@ -57,10 +57,20 @@ public class Generics {
 		Object o = new ArrayList<String>();
 		List<Date> ld5 = (List<Date>) o;
 		// Date d = ld5.add(0); // This will throw error
+
+		collectionsToArrays();
 	}
 
 	public static void collectionsToArrays() {
-
+		Collection<String> myCollection = new ArrayList<>();
+		myCollection.add("Miguel A");
+		myCollection.add("Miguel J");
+		String[] names = myCollection.toArray(new String[0]);
+		for (String name : names) {
+			System.out.println(name);
+		}
+		Collection<String> collectionNames = Arrays.asList(names);
+		System.out.println(collectionNames);
 	}
 }
 
