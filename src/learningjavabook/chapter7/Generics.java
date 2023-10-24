@@ -72,6 +72,13 @@ public class Generics {
 		Collection<String> collectionNames = Arrays.asList(names);
 		System.out.println(collectionNames);
 	}
+
+	public static void iterating(Collection c) {
+		Iterator iterator = c.iterator();
+		while (iterator.hasNext()) {
+			System.out.println(iterator.next());
+		}
+	}
 }
 
 class Employee {
