@@ -1,4 +1,4 @@
-package learningjavabook.game;
+package learningjavabook.appletoss;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,4 +1,4 @@
-package learningjavabook.game;
+package learningjavabook.appletoss;
 
 import java.awt.*;
 import static java.awt.Color.*;
