@@ -2,6 +2,7 @@ package learningjavabook.appletoss;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 /**
  * The playing field for our game. This class will be undergoing quite a few
@@ -23,6 +24,7 @@ public class Field extends JComponent {
 	Apple a1 = new Apple();
 	Apple a2 = new Apple();
 	Tree tree = new Tree();
+	ArrayList<Tree> trees = new ArrayList<>();
 	Physicist physicist;
 
 	public void setupApples() {
@@ -62,5 +64,11 @@ public class Field extends JComponent {
 		} else {
 			System.out.println("Apples are not touching.");
 		}
+	}
+
+	public void addTree(int x, int y) {
+		Tree tree = new Tree();
+		tree.setPosition(x, y);
+		trees.add(tree);
 	}
 }
