@@ -35,7 +35,7 @@ public class AppleToss extends JFrame {
 		field.setupTree();
 
 		for (int row = 1; row <= 2; row++) {
-			for (int col = 1; col <= 3; col++) {
+			for (int col = 1; col <= 5; col++) {
 				field.addTree(col * 100, row * 100);
 			}
 		}
