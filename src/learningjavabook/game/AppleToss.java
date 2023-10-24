@@ -1,4 +1,4 @@
-package learningjavabook.chapter5.game;
+package learningjavabook.game;
 
 import javax.swing.*;
 
