@@ -33,6 +33,13 @@ public class AppleToss extends JFrame {
 		player1.setField(field);
 		field.setupApples();
 		field.setupTree();
+
+		for (int row = 1; row <= 2; row++) {
+			for (int col = 1; col <= 3; col++) {
+				field.addTree(col * 100, row * 100);
+			}
+		}
+
 		add(field);
 	}
 

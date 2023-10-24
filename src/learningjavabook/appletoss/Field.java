@@ -52,7 +52,9 @@ public class Field extends JComponent {
 	protected void paintComponent(Graphics g) {
 		g.setColor(fieldColor);
 		g.fillRect(0,0, getWidth(), getHeight());
-		tree.draw(g);
+		for (Tree tree : trees) {
+			tree.draw(g);
+		}
 		physicist.draw(g);
 		a1.draw(g);
 		a2.draw(g);
