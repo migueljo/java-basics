@@ -5,5 +5,8 @@ public class Strings {
 		String quote = "To be or not to be";
 		int quoteLength = quote.length();
 		boolean isQuoteEmpty = quote.isEmpty();
+
+		String name = "Miguel " + "Martínez";
+		String name2 = "Miguel".concat(" Martínez");
 	}
 }
