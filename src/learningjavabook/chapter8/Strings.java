@@ -16,5 +16,8 @@ public class Strings {
       And the mome raths outgrabe.
     """;
 
+		char[] nameAsArray = new char[] {'M', 'i', 'g', 'u', 'e', 'l'};
+		String nameAsString = new String(nameAsArray);
+		System.out.println(nameAsString);
 	}
 }
