@@ -8,5 +8,13 @@ public class Strings {
 
 		String name = "Miguel " + "Martínez";
 		String name2 = "Miguel".concat(" Martínez");
+
+		String multiline = """
+      Twas brillig, and the slithy toves
+      Did gyre and gimble in the wabe:
+      All mimsy were the borogoves,
+      And the mome raths outgrabe.
+    """;
+
 	}
 }
