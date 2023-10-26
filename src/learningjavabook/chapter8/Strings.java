@@ -1,5 +1,7 @@
 package learningjavabook.chapter8;
 
+import java.util.Date;
+
 public class Strings {
 	public static void main(String[] args) {
 		String quote = "To be or not to be";
@@ -33,5 +35,13 @@ public class Strings {
 		String two = String.valueOf(2.384f);
 		String notTrue = String.valueOf(false);
 		System.out.println(one + ", " + two + ", " + notTrue);
+
+		Date date = new Date();
+		String d1 = String.valueOf(date);
+		String d2 = date.toString();
+		System.out.println(d1 + ", " + d2);
+		date = null;
+		d1 = String.valueOf(date); // null
+		// d2 = date.toString(); // NullPointerException
 	}
 }
