@@ -76,5 +76,11 @@ public class Strings {
 		String url = "https://google.com";
 		System.out.println("Is it secure? " + url.startsWith(url));
 		System.out.println("Is it .com? " + url.endsWith(url));
+
+		String alphabet = "abcdefghijklmnopqrstuvwxyz";
+		int i1 = alphabet.indexOf("a");
+		int i2 = alphabet.indexOf("def");
+		int i3 = alphabet.indexOf("abfd");
+		System.out.println(i1 + ", " + i2 + ", " + i3 + "");
 	}
 }
