@@ -43,5 +43,10 @@ public class Strings {
 		date = null;
 		d1 = String.valueOf(date); // null
 		// d2 = date.toString(); // NullPointerException
+		String today = "Today's date is: " + new Date();
+		System.out.println(today);
+
+		String two2 = "" + 2.384f;
+		String today2 = "" + new Date();
 	}
 }
