@@ -23,5 +23,10 @@ public class Strings {
 		byte[] stringBytes = new byte[] {(byte)97, (byte)98, (byte)99};
 		String bytesAsString = new String(stringBytes);
 		System.out.println(bytesAsString);
+
+		String scientist = "Newton";
+		for (int i = 0; i < scientist.length(); i++) {
+			System.out.println(scientist.charAt(i));
+		}
 	}
 }
