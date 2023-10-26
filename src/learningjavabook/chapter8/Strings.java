@@ -62,5 +62,12 @@ public class Strings {
 		String foo1 = String.valueOf(new char[] {'f', 'o', 'o'});
 		System.out.println("Comparing with == :: " + String.valueOf(foo == foo1));
 		System.out.println("Comparing with equals :: " + foo.equals(foo1));
+
+		String abc = "abc";
+		String def = "def";
+		String num = "123";
+		System.out.println(abc.compareTo(def) < 0);
+		System.out.println(abc.compareTo( abc ) == 0);
+		System.out.println(abc.compareTo( num ) > 0);
 	}
 }
