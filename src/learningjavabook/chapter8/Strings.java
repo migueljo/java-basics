@@ -19,5 +19,9 @@ public class Strings {
 		char[] nameAsArray = new char[] {'M', 'i', 'g', 'u', 'e', 'l'};
 		String nameAsString = new String(nameAsArray);
 		System.out.println(nameAsString);
+
+		byte[] stringBytes = new byte[] {(byte)97, (byte)98, (byte)99};
+		String bytesAsString = new String(stringBytes);
+		System.out.println(bytesAsString);
 	}
 }
