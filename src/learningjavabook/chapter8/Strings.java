@@ -84,5 +84,11 @@ public class Strings {
 		System.out.println(i1 + ", " + i2 + ", " + i3 + "");
 
 		System.out.println("Last index of: " + alphabet.lastIndexOf("abc"));
+
+		String log = "There is an emergency in sector 7!";
+		if (log.contains("emergency")) {
+			System.out.println("Call someone");
+		}
+		if (log.indexOf("emergency") != -1) System.out.println("Call someone 2");
 	}
 }
