@@ -28,5 +28,10 @@ public class Strings {
 		for (int i = 0; i < scientist.length(); i++) {
 			System.out.println(scientist.charAt(i));
 		}
+
+		String one = String.valueOf(1);
+		String two = String.valueOf(2.384f);
+		String notTrue = String.valueOf(false);
+		System.out.println(one + ", " + two + ", " + notTrue);
 	}
 }
