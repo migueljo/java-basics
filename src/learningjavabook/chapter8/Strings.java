@@ -50,6 +50,7 @@ public class Strings {
 		String today2 = "" + new Date();
 
 		compareStrings();
+		searching();
 	}
 
 	static void compareStrings() {
@@ -69,5 +70,11 @@ public class Strings {
 		System.out.println(abc.compareTo(def) < 0);
 		System.out.println(abc.compareTo( abc ) == 0);
 		System.out.println(abc.compareTo( num ) > 0);
+	}
+
+	static void searching() {
+		String url = "https://google.com";
+		System.out.println("Is it secure? " + url.startsWith(url));
+		System.out.println("Is it .com? " + url.endsWith(url));
 	}
 }
