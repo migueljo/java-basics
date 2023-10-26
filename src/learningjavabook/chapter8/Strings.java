@@ -48,5 +48,19 @@ public class Strings {
 
 		String two2 = "" + 2.384f;
 		String today2 = "" + new Date();
+
+		compareStrings();
+	}
+
+	static void compareStrings() {
+		String one = "ONE";
+		String one1 = "one";
+		System.out.println("Case sensitive equals? " + one.equals(one1));
+		System.out.println("Case insensitive equals? " + one.equalsIgnoreCase(one1));
+
+		String foo = "foo";
+		String foo1 = String.valueOf(new char[] {'f', 'o', 'o'});
+		System.out.println("Comparing with == :: " + String.valueOf(foo == foo1));
+		System.out.println("Comparing with equals :: " + foo.equals(foo1));
 	}
 }
