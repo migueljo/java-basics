@@ -105,7 +105,8 @@ public class Strings {
 		byte b2 = new Scanner("16").nextByte();
 		int n2 = new Scanner("42").nextInt();
 		long l2 = new Scanner("999999").nextLong();
+		float f2 = new Scanner("4.3").nextFloat();
 
-		System.out.println(b2 + ", " + n2 + ", " + l2 + ",");
+		System.out.println(b2 + ", " + n2 + ", " + l2 + ", " + f2 + ", ");
 	}
 }
