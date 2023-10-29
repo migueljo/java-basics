@@ -99,5 +99,6 @@ public class Strings {
 		long l = Long.parseLong("999999999");
 		float f = Float.parseFloat("4.3");
 		double d = Double.parseDouble("99.9999999");
+		boolean boolean1 = Boolean.parseBoolean("true");
 	}
 }
