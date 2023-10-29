@@ -51,6 +51,7 @@ public class Strings {
 
 		compareStrings();
 		searching();
+		parsing();
 	}
 
 	static void compareStrings() {
@@ -90,5 +91,9 @@ public class Strings {
 			System.out.println("Call someone");
 		}
 		if (log.indexOf("emergency") != -1) System.out.println("Call someone 2");
+	}
+
+	static void parsing() {
+
 	}
 }
