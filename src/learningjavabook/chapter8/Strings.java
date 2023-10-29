@@ -94,6 +94,8 @@ public class Strings {
 	}
 
 	static void parsing() {
-
+		byte b = Byte.parseByte("16");
+		int n = Integer.parseInt("42");
+		long l = Long.parseLong("999999999");
 	}
 }
