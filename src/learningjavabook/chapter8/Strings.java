@@ -97,5 +97,7 @@ public class Strings {
 		byte b = Byte.parseByte("16");
 		int n = Integer.parseInt("42");
 		long l = Long.parseLong("999999999");
+		float f = Float.parseFloat("4.3");
+		double d = Double.parseDouble("99.9999999");
 	}
 }
