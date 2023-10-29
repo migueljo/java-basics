@@ -106,7 +106,9 @@ public class Strings {
 		int n2 = new Scanner("42").nextInt();
 		long l2 = new Scanner("999999").nextLong();
 		float f2 = new Scanner("4.3").nextFloat();
+		double d2 = new Scanner("99.9999999").nextDouble();
+		boolean boolean2 = new Scanner("true").nextBoolean();
 
-		System.out.println(b2 + ", " + n2 + ", " + l2 + ", " + f2 + ", ");
+		System.out.println(b2 + ", " + n2 + ", " + l2 + ", " + f2 + ", " + d2 + ", " + boolean2);
 	}
 }
