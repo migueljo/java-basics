@@ -1,6 +1,7 @@
 package learningjavabook.chapter8;
 
 import java.util.Date;
+import java.util.Scanner;
 
 public class Strings {
 	public static void main(String[] args) {
@@ -100,5 +101,11 @@ public class Strings {
 		float f = Float.parseFloat("4.3");
 		double d = Double.parseDouble("99.9999999");
 		boolean boolean1 = Boolean.parseBoolean("true");
+
+		byte b2 = new Scanner("16").nextByte();
+		int n2 = new Scanner("42").nextInt();
+		long l2 = new Scanner("999999").nextLong();
+
+		System.out.println(b2 + ", " + n2 + ", " + l2 + ",");
 	}
 }
