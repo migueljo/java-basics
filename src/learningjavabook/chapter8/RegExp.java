@@ -7,6 +7,7 @@ public class RegExp {
 
 	static void escapedChars() {
 		String text = "A\\B\\C\\D\\E";
+		// Actual regexp "\"
 		String[] letters = text.split("\\\\");
 		System.out.println(text);
 		for (String letter : letters) {
