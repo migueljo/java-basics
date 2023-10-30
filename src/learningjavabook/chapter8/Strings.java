@@ -1,5 +1,6 @@
 package learningjavabook.chapter8;
 
+import java.util.Arrays;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -57,7 +58,9 @@ public class Strings {
 	}
 
 	static void tokenizing() {
-
+		String text = "Now is the time for all good men";
+		String[] words = text.split(" ");
+		System.out.println(Arrays.toString(words));
 	}
 
 	static void compareStrings() {
