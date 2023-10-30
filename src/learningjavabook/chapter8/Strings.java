@@ -63,8 +63,15 @@ public class Strings {
 		System.out.println(Arrays.toString(words));
 
 		String text2 = "4231,         Java Programming, 1000.00";
-		String[] fields = text2.split("\\s*,\\s");
+		String[] fields = text2.split("\\s*,\\s*");
 		System.out.println(Arrays.toString(fields));
+
+		String text3 = "4231,         Java Programming, 1000.00";
+		Scanner scanner = new Scanner(text3).useDelimiter("\\s*,\\s*");
+		int checkNumber = scanner.nextInt();
+		String description = scanner.next();
+		float amount = scanner.nextFloat();
+		System.out.println("**** Data ****\n" + "Number: " + checkNumber + "\nDescription: " + description + "\nAmount: " + amount + "\n**** Data ****");
 	}
 
 	static void compareStrings() {
