@@ -61,6 +61,10 @@ public class Strings {
 		String text = "Now is the time for all good men";
 		String[] words = text.split(" ");
 		System.out.println(Arrays.toString(words));
+
+		String text2 = "4231,         Java Programming, 1000.00";
+		String[] fields = text2.split("\\s*,\\s");
+		System.out.println(Arrays.toString(fields));
 	}
 
 	static void compareStrings() {
