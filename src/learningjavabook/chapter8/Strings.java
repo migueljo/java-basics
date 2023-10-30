@@ -3,6 +3,7 @@ package learningjavabook.chapter8;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class Strings {
 	public static void main(String[] args) {
@@ -72,6 +73,13 @@ public class Strings {
 		String description = scanner.next();
 		float amount = scanner.nextFloat();
 		System.out.println("**** Data ****\n" + "Number: " + checkNumber + "\nDescription: " + description + "\nAmount: " + amount + "\n**** Data ****");
+
+		String text4 = "Now is the time for all good men (and women)...";
+		StringTokenizer stringTokenizer = new StringTokenizer(text4);
+		while (stringTokenizer.hasMoreTokens()) {
+			String word = stringTokenizer.nextToken();
+			System.out.println("Token word: " + word);
+		}
 	}
 
 	static void compareStrings() {
