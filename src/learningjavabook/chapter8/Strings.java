@@ -53,6 +53,11 @@ public class Strings {
 		compareStrings();
 		searching();
 		parsing();
+		tokenizing();
+	}
+
+	static void tokenizing() {
+
 	}
 
 	static void compareStrings() {
@@ -93,7 +98,6 @@ public class Strings {
 		}
 		if (log.indexOf("emergency") != -1) System.out.println("Call someone 2");
 	}
-
 	static void parsing() {
 		byte b = Byte.parseByte("16");
 		int n = Integer.parseInt("42");
