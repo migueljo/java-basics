@@ -80,6 +80,13 @@ public class Strings {
 			String word = stringTokenizer.nextToken();
 			System.out.println("Token word: " + word);
 		}
+
+		String text5 = "4231,     Java Programming, 1000.00";
+		StringTokenizer stringTokenizer1 = new StringTokenizer(text5, ",");
+		while (stringTokenizer1.hasMoreTokens()) {
+			String word = stringTokenizer1.nextToken();
+			System.out.println("Token word 2:" + word);
+		}
 	}
 
 	static void compareStrings() {
