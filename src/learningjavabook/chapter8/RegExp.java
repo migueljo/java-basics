@@ -33,6 +33,6 @@ public class RegExp {
 		System.out.println("Zero letters: " + Arrays.toString(alphabet.split("[A-Z]")));
 		System.out.println("All letters and numbers" + Arrays.toString(allLettersAndNumbers.split("[a-z0-9]")));
 		System.out.println("Match al numbers after 5 to 9:" + Arrays.toString(numbers.split("[^0-5]")));
-		System.out.println("Composing range and 1 character " + Arrays.toString(numbers.split("[0-5[9]]")));
+		System.out.println("Composing range and 1 character " + Arrays.toString(numbers.split("[0-59]")));
 	}
 }
