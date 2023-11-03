@@ -29,10 +29,11 @@ public class RegExp {
 		String numbers = "0123456789";
 		String allLettersAndNumbers = alphabet + numbers;
 		System.out.println("First 5 letters: " + Arrays.toString(alphabet.split("[abcde]")));
-		System.out.println("All letters: " + Arrays.toString(alphabet.split("[a-z]")));
-		System.out.println("Zero letters: " + Arrays.toString(alphabet.split("[A-Z]")));
+		System.out.println("Match all letters: " + Arrays.toString(alphabet.split("[a-z]")));
+		System.out.println("Match zero letters: " + Arrays.toString(alphabet.split("[A-Z]")));
 		System.out.println("All letters and numbers" + Arrays.toString(allLettersAndNumbers.split("[a-z0-9]")));
-		System.out.println("Match al numbers after 5 to 9:" + Arrays.toString(numbers.split("[^0-5]")));
-		System.out.println("Composing range and 1 character " + Arrays.toString(numbers.split("[0-59]")));
+		System.out.println("Match al numbers after 5 to 9: " + Arrays.toString(numbers.split("[^0-5]")));
+		System.out.println("Composing range and 1 character: " + Arrays.toString(numbers.split("[0-59]")));
+		System.out.println("Logical && AND: " + Arrays.toString(alphabet.split("[a-z&&[^m-p]]"))); // Simplify warning works in another way
 	}
 }
