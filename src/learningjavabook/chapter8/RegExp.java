@@ -27,5 +27,6 @@ public class RegExp {
 	static void customClasses() {
 		String text = "abcdefghijklmnopqrstuvwxyz";
 		System.out.println("First 5 letters: " + Arrays.toString(text.split("[abcde]")));
+		System.out.println("All letters: " + Arrays.toString(text.split("[a-z]")));
 	}
 }
