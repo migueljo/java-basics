@@ -6,6 +6,7 @@ public class RegExp {
 	public static void main(String[] args) {
 		escapedChars();
 		wordCharacter();
+		customClasses();
 	}
 
 	static void escapedChars() {
@@ -21,5 +22,10 @@ public class RegExp {
 	static void wordCharacter() {
 		String text = "Yo tengo 28 años, pero parece que tengo más? _ :) _ @";
 		System.out.println(Arrays.toString(text.split("\\w")));
+	}
+
+	static void customClasses() {
+		String text = "abcdefghijklmnopqrstuvwxyz";
+		System.out.println("First 5 letters: " + Arrays.toString(text.split("[abcde]")));
 	}
 }
