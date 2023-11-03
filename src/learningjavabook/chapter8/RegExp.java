@@ -25,9 +25,12 @@ public class RegExp {
 	}
 
 	static void customClasses() {
-		String text = "abcdefghijklmnopqrstuvwxyz";
-		System.out.println("First 5 letters: " + Arrays.toString(text.split("[abcde]")));
-		System.out.println("All letters: " + Arrays.toString(text.split("[a-z]")));
-		System.out.println("Zero letters: " + Arrays.toString(text.split("[A-Z]")));
+		String alphabet = "abcdefghijklmnopqrstuvwxyz";
+		String numbers = "0123456789";
+		String allLettersAndNumbers = alphabet + numbers;
+		System.out.println("First 5 letters: " + Arrays.toString(alphabet.split("[abcde]")));
+		System.out.println("All letters: " + Arrays.toString(alphabet.split("[a-z]")));
+		System.out.println("Zero letters: " + Arrays.toString(alphabet.split("[A-Z]")));
+		System.out.println("All letters and numbers" + Arrays.toString(allLettersAndNumbers.split("[a-z0-9]")));
 	}
 }
