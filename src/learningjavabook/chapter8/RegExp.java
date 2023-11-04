@@ -27,7 +27,10 @@ public class RegExp {
 	static void customClasses() {
 		String alphabet = "abcdefghijklmnopqrstuvwxyz";
 		String numbers = "0123456789";
-		String arose = "A rose is a rose is a rose";
+		String arose = """
+      A rose is a rose is a rose
+      A rose is a rose is a rose
+      A rose is a rose is a rose""";
 		String allLettersAndNumbers = alphabet + numbers;
 		System.out.println("First 5 letters: " + Arrays.toString(alphabet.split("[abcde]")));
 		System.out.println("Match all letters: " + Arrays.toString(alphabet.split("[a-z]")));
