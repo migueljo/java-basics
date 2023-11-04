@@ -31,6 +31,7 @@ public class RegExp {
       A rose is a rose is a rose
       A rose is a rose is a rose
       A rose is a rose is a rose""";
+		String roses = "rose rosemary primrose roses";
 		String allLettersAndNumbers = alphabet + numbers;
 		System.out.println("First 5 letters: " + Arrays.toString(alphabet.split("[abcde]")));
 		System.out.println("Match all letters: " + Arrays.toString(alphabet.split("[a-z]")));
