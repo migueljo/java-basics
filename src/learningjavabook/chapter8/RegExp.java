@@ -43,8 +43,9 @@ public class RegExp {
 			String regex = "\\d\\d\\d/?\\d";
 			System.out.println("Optional -> " + v + " matches " + regex + " ? " + v.matches(regex));
 		}
-		System.out.println("-----------------------------------");
 
+		System.out.println("-----------------------------------");
+		System.out.println("Range inclusive");
 		ArrayList<String> ranges = new ArrayList<>();
 		ranges.add("Holas");
 		ranges.add("Caros");
@@ -52,6 +53,18 @@ public class RegExp {
 		ranges.add("Televisor");
 		for (String v : ranges) {
 			String regex = "\\b\\w{5,7}\\b";
+			System.out.println("Range -> " + v + " matches " + regex + " ? " + v.matches(regex));
+		}
+
+		System.out.println("-----------------------------------");
+		System.out.println("Range from x to infinite");
+		ArrayList<String> ranges2 = new ArrayList<>();
+		ranges2.add("Hola");
+		ranges2.add("Caro");
+		ranges2.add("Motos");
+		ranges2.add("Televisor");
+		for (String v : ranges2) {
+			String regex = "\\b\\w{5,}\\b";
 			System.out.println("Range -> " + v + " matches " + regex + " ? " + v.matches(regex));
 		}
 	}
