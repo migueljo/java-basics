@@ -1,12 +1,27 @@
 package learningjavabook.chapter8;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class RegExp {
 	public static void main(String[] args) {
-		escapedChars();
-		wordCharacter();
-		customClasses();
+		/*
+		*escapedChars();
+		* wordCharacter();
+		* customClasses();
+		* */
+		repetition();
+	}
+
+	static void repetition() {
+		ArrayList<String> optionals = new ArrayList<>();
+		optionals.add("0000");
+		optionals.add("000/0");
+		optionals.add("11111");
+		for (String o : optionals) {
+			String regex = "\\d\\d\\d/?\\d";
+			System.out.println("Optional -> " + o + " matches " + regex + " ? " + o.matches(regex));
+		}
 	}
 
 	static void escapedChars() {
