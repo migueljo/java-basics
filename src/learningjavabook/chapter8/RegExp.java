@@ -44,6 +44,8 @@ public class RegExp {
 			System.out.println("Optional -> " + v + " matches " + regex + " ? " + v.matches(regex));
 		}
 		System.out.println("-----------------------------------");
+
+		ArrayList<String> ranges = new ArrayList<>();
 	}
 
 	static void escapedChars() {
