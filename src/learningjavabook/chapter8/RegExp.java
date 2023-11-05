@@ -14,13 +14,24 @@ public class RegExp {
 	}
 
 	static void repetition() {
+		ArrayList<String> anys = new ArrayList<>();
+		anys.add("01");
+		anys.add("001");
+		anys.add("0001");
+		anys.add("1");
+		anys.add("011");
+		for (String v : anys) {
+			String regex = "0*\\d";
+			System.out.println("Any -> " + v + " matches " + regex + " ? " + v.matches(regex));
+		}
+
 		ArrayList<String> optionals = new ArrayList<>();
 		optionals.add("0000");
 		optionals.add("000/0");
 		optionals.add("11111");
-		for (String o : optionals) {
+		for (String v : optionals) {
 			String regex = "\\d\\d\\d/?\\d";
-			System.out.println("Optional -> " + o + " matches " + regex + " ? " + o.matches(regex));
+			System.out.println("Optional -> " + v + " matches " + regex + " ? " + v.matches(regex));
 		}
 	}
 
