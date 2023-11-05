@@ -46,6 +46,14 @@ public class RegExp {
 		System.out.println("-----------------------------------");
 
 		ArrayList<String> ranges = new ArrayList<>();
+		ranges.add("Holas");
+		ranges.add("Caros");
+		ranges.add("Motos");
+		ranges.add("Televisor");
+		for (String v : ranges) {
+			String regex = "\\b\\w{5,7}\\b";
+			System.out.println("Range -> " + v + " matches " + regex + " ? " + v.matches(regex));
+		}
 	}
 
 	static void escapedChars() {
