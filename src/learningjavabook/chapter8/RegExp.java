@@ -5,11 +5,9 @@ import java.util.Arrays;
 
 public class RegExp {
 	public static void main(String[] args) {
-		/*
-		*escapedChars();
-		* wordCharacter();
-		* customClasses();
-		* */
+		escapedChars();
+		wordCharacter();
+		customClasses();
 		repetition();
 	}
 
@@ -24,6 +22,18 @@ public class RegExp {
 			String regex = "0*\\d";
 			System.out.println("Any -> " + v + " matches " + regex + " ? " + v.matches(regex));
 		}
+		System.out.println("-----------------------------------");
+
+		ArrayList<String> somes = new ArrayList<>();
+		somes.add("01");
+		somes.add("001");
+		somes.add("0001");
+		somes.add("1");
+		for (String v : somes) {
+			String regex = "0+\\d";
+			System.out.println("Some -> " + v + " matches " + regex + " ? " + v.matches(regex));
+		}
+		System.out.println("-----------------------------------");
 
 		ArrayList<String> optionals = new ArrayList<>();
 		optionals.add("0000");
@@ -33,6 +43,7 @@ public class RegExp {
 			String regex = "\\d\\d\\d/?\\d";
 			System.out.println("Optional -> " + v + " matches " + regex + " ? " + v.matches(regex));
 		}
+		System.out.println("-----------------------------------");
 	}
 
 	static void escapedChars() {
