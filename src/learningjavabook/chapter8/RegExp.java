@@ -19,12 +19,14 @@ public class RegExp {
 		String text = """
       https://google.com
       https://youtube.com""";
-		String urlRegex = "(?m)\\w+://[\\w/]*.(com|net)";
+		String urlRegex = "(?im)\\w+://[\\w/]*.(com|net)";
 		Pattern urlPattern = Pattern.compile(urlRegex);
 		Matcher matcher = urlPattern.matcher(text);
-
-		Boolean match = Pattern.matches(urlRegex, text);
-		System.out.println("Matches any url? " + match);
+		if (matcher.find()) {
+			System.out.println("Start: " + matcher.start());
+			System.out.println("End: " + matcher.end());
+			System.out.println("Group: " + matcher.group());
+		}
 	}
 
 	static void alternation() {
