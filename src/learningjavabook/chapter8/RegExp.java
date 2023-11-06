@@ -17,10 +17,14 @@ public class RegExp {
 
 	static void pattern() {
 		String text = """
-						https://google.com
-						https://youtube.com""";
-		Pattern urlPattern = Pattern.compile("\\w://[\\w/]*");
+      https://google.com
+      https://youtube.com""";
+		String urlRegex = "(?m)\\w+://[\\w/]*.(com|net)";
+		Pattern urlPattern = Pattern.compile(urlRegex);
 		Matcher matcher = urlPattern.matcher(text);
+
+		Boolean match = Pattern.matches(urlRegex, text);
+		System.out.println("Matches any url? " + match);
 	}
 
 	static void alternation() {
