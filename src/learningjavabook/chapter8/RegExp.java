@@ -9,6 +9,20 @@ public class RegExp {
 		wordCharacter();
 		customClasses();
 		repetition();
+		alternation();
+	}
+
+	static void alternation() {
+		ArrayList<String> dates = new ArrayList<>();
+		dates.add("Fri, Oct 12, 2001");
+		dates.add("10/12/2001");
+		System.out.println("-----------------------------------");
+		System.out.println("Logical OR");
+		for (String v : dates) {
+			String regex = "\\w+, \\w+ \\d+ \\d+ | \\d\\d/\\d\\d/\\d+";
+			System.out.println("Logical OR | -> " + v + " matches \"" + regex + "\" ? " + v.matches(regex));
+		}
+		System.out.println("-----------------------------------");
 	}
 
 	static void repetition() {
