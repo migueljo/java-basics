@@ -27,7 +27,7 @@ public class RegExp {
 		emails.add("m@m.com");
 		emails.add("a@a.gov");
 		emails.add("a@a.a.net");
-		emails.add("m@.com"); // TODO: Should be false
+		emails.add("m@.com"); // TODO: Should be false not true
 		emails.add("@com");
 		for (String v : emails) {
 			// \w+@[\w.]*(com|net|edu|gov)
