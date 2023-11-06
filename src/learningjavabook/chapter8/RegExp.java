@@ -2,6 +2,8 @@ package learningjavabook.chapter8;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class RegExp {
 	public static void main(String[] args) {
@@ -10,6 +12,15 @@ public class RegExp {
 		customClasses();
 		repetition();
 		alternation();
+		pattern();
+	}
+
+	static void pattern() {
+		String text = """
+						https://google.com
+						https://youtube.com""";
+		Pattern urlPattern = Pattern.compile("\\w://[\\w/]*");
+		Matcher matcher = urlPattern.matcher(text);
 	}
 
 	static void alternation() {
@@ -31,7 +42,7 @@ public class RegExp {
 		emails.add("@com");
 		for (String v : emails) {
 			// \w+@[\w.]*(com|net|edu|gov)
-			String regex = "\\w+@[\\w.]*(com|net|edu|gov)";
+			String regex = "\\w+@[\\w+\\.]+(com|net|edu|gov)";
 			System.out.println("Logical OR | -> " + v + " matches \"" + regex + "\" ? " + v.matches(regex));
 		}
 		System.out.println("-----------------------------------");
