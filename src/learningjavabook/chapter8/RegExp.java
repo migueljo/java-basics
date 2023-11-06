@@ -13,14 +13,25 @@ public class RegExp {
 	}
 
 	static void alternation() {
+		System.out.println("-----------------------------------");
+		System.out.println("Logical OR");
 		ArrayList<String> dates = new ArrayList<>();
 		dates.add("Fri, Oct 12, 2001");
 		dates.add("10/12/2001");
 		dates.add("12 octubre 2023");
-		System.out.println("-----------------------------------");
-		System.out.println("Logical OR");
 		for (String v : dates) {
 			String regex = "\\w+, \\w+ \\d+, \\d+|\\d\\d/\\d\\d/\\d+";
+			System.out.println("Logical OR | -> " + v + " matches \"" + regex + "\" ? " + v.matches(regex));
+		}
+		ArrayList<String> emails = new ArrayList<>();
+		emails.add("m@m.com");
+		emails.add("a@a.gov");
+		emails.add("a@a.a.net");
+		emails.add("m@.com"); // TODO: Should be false
+		emails.add("@com");
+		for (String v : emails) {
+			// \w+@[\w.]*(com|net|edu|gov)
+			String regex = "\\w+@[\\w.]*(com|net|edu|gov)";
 			System.out.println("Logical OR | -> " + v + " matches \"" + regex + "\" ? " + v.matches(regex));
 		}
 		System.out.println("-----------------------------------");
