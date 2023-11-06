@@ -16,6 +16,8 @@ public class RegExp {
 	}
 
 	static void pattern() {
+		System.out.println("-----------------------------------");
+		System.out.println("Pattern Start");
 		String text = """
       https://google.com
       https://youtube.com""";
@@ -27,6 +29,11 @@ public class RegExp {
 			System.out.println("End: " + matcher.end());
 			System.out.println("Group: " + matcher.group());
 		}
+
+		String sampleEmail = "my.name@some.domain";
+
+		System.out.println("Pattern End");
+		System.out.println("-----------------------------------");
 	}
 
 	static void alternation() {
