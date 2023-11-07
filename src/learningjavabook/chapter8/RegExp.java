@@ -31,6 +31,7 @@ public class RegExp {
 		}
 
 		String sampleEmail = "my.name@some.domain";
+		Boolean validEmail = Pattern.matches("[^@]+@[^@]+", sampleEmail);
 
 		System.out.println("Pattern End");
 		System.out.println("-----------------------------------");
