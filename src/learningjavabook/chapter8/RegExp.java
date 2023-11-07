@@ -39,6 +39,12 @@ public class RegExp {
 		boolean validEmail = Pattern.matches("(?i)[^@]+@[^@]+\\.[a-z]+", sampleEmail);
 		System.out.println(sampleEmail + "is a valid email? " + validEmail);
 
+		String text2 = "Foo, bar  ,    blah";
+		String[] badFields = text2.split(",");
+		String[] goodFields = text2.split("\\s*,\\s*");
+		System.out.println(Arrays.toString(badFields));
+		System.out.println(Arrays.toString(goodFields));
+
 		System.out.println("Pattern End");
 		System.out.println("-----------------------------------");
 	}
