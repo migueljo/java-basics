@@ -30,8 +30,9 @@ public class RegExp {
 			System.out.println("Group: " + matcher.group());
 		}
 
-		String sampleEmail = "my.name@some.domain";
-		Boolean validEmail = Pattern.matches("[^@]+@[^@]+", sampleEmail);
+		String sampleEmail = "still@gmail.com";
+		boolean validEmail = Pattern.matches("[^@]+@[^@]+\\.[a-z]+", sampleEmail);
+		System.out.println(sampleEmail + "is a valid email? " + validEmail);
 
 		System.out.println("Pattern End");
 		System.out.println("-----------------------------------");
