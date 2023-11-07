@@ -28,6 +28,11 @@ public class RegExp {
 			System.out.println("Start: " + matcher.start());
 			System.out.println("End: " + matcher.end());
 			System.out.println("Group: " + matcher.group());
+			if (matcher.find()) {
+				System.out.println("Start: " + matcher.start());
+				System.out.println("End: " + matcher.end());
+				System.out.println("Group: " + matcher.group());
+			}
 		}
 
 		String sampleEmail = "my.name@some.Domain";
