@@ -31,6 +31,10 @@ public class Field extends JComponent {
 		Tree tree = new Tree();
 		tree.setPosition(generateRandomX(), generateRandomY());
 		trees.add(tree);
+		// TODO: Make sure the trees don't touch the player
+		// TODO: Make sure the whole trees are rendered inside the canvas
+		// TODO: Render only one apple
+		// TODO: Render the apple on top of the player
 	}
 
 	public void setupApples() {
