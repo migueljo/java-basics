@@ -27,6 +27,12 @@ public class Field extends JComponent {
 	ArrayList<Tree> trees = new ArrayList<>();
 	Physicist physicist;
 
+	public void addTree() {
+		Tree tree = new Tree();
+		tree.setPosition(generateRandomX(), generateRandomY());
+		trees.add(tree);
+	}
+
 	public void setupApples() {
 		// For now, just play with our apple attributes directly
 		a1.diameter = 3.0f;
@@ -68,9 +74,21 @@ public class Field extends JComponent {
 		}
 	}
 
-	public void addTree(int x, int y) {
-		Tree tree = new Tree();
-		tree.setPosition(x, y);
-		trees.add(tree);
+	private int getRandomNumber(int min, int max) {
+		return min + (int)(Math.random() * (max - min));
+	}
+
+	private int generateRandomX() {
+		// at least half the width of the tree plus a few pixels
+		int leftMargin = Field.TREE_WIDTH_IN_PIXELS / 2 + 5;
+		int rightMargin = Contants.FIELD_WIDTH - leftMargin;
+		return  getRandomNumber(leftMargin, rightMargin);
+	}
+
+	private int generateRandomY() {
+		// at least half the width of the tree plus a few pixels
+		int topMargin = Field.TREE_WIDTH_IN_PIXELS / 2 + 5;
+		int bottomMargin = Contants.FIELD_HEIGHT - topMargin;
+		return  getRandomNumber(topMargin, bottomMargin);
 	}
 }

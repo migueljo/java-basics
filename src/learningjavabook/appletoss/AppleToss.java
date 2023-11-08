@@ -11,36 +11,16 @@ public class AppleToss extends JFrame {
 
 	Field field = new Field();
 	Physicist player1 = new Physicist();
-	final int WIDTH = 800;
-	final int HEIGHT = 600;
 
 	public AppleToss() {
 		// Create our frame
 		super("Apple Toss Game");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setSize(WIDTH,HEIGHT);
+		setSize(Contants.FIELD_WIDTH, Contants.FIELD_HEIGHT);
 		setResizable(false);
 
 		// Build the field with our player and some trees
 		setupFieldForOnePlayer();
-	}
-
-	private int getRandomNumber(int min, int max) {
-		return min + (int)(Math.random() * (max - min));
-	}
-
-	private int generateRandomX() {
-		// at least half the width of the tree plus a few pixels
-		int leftMargin = Field.TREE_WIDTH_IN_PIXELS / 2 + 5;
-		int rightMargin = WIDTH - leftMargin;
-		return  getRandomNumber(leftMargin, rightMargin);
-	}
-
-	private int generateRandomY() {
-		// at least half the width of the tree plus a few pixels
-		int topMargin = Field.TREE_WIDTH_IN_PIXELS / 2 + 5;
-		int bottomMargin = HEIGHT - topMargin;
-		return  getRandomNumber(topMargin, bottomMargin);
 	}
 
 	/**
@@ -55,15 +35,8 @@ public class AppleToss extends JFrame {
 		field.setupTree();
 
 		for (int i = 0; i < 10; i++) {
-			field.addTree(generateRandomX(), generateRandomY());
+			field.addTree();
 		}
-
-		/**
-		 * for (int row = 1; row <= 2; row++) {
-		 * 			for (int col = 1; col <= 5; col++) {
-		 * 				field.addTree(generateRandomX(), generateRandomY());
-		 *            }* 		}
-		 */
 
 		add(field);
 	}
