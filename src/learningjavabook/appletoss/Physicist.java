@@ -111,6 +111,9 @@ public class Physicist implements GamePiece {
 		// We don't really have any collisions to detect yet, so just return "no".
 		// As we fill out all of the game pieces, we'll come back to this method
 		// and provide a more useful response.
+		// TODO: Implement isTouching feature
+		Rectangle otherPieceBox = otherPiece.getBoundingBox();
+		System.out.println(boundingBox);
 		return false;
 	}
 }
