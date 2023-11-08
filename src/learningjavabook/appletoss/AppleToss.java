@@ -16,7 +16,7 @@ public class AppleToss extends JFrame {
 		// Create our frame
 		super("Apple Toss Game");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setSize(Contants.FIELD_WIDTH, Contants.FIELD_HEIGHT);
+		setSize(Constants.FIELD_WIDTH, Constants.FIELD_HEIGHT);
 		setResizable(false);
 
 		// Build the field with our player and some trees

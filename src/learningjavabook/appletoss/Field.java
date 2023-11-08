@@ -35,7 +35,6 @@ public class Field extends JComponent {
 			System.err.println("Repositioning an intersecting tree");
 		}
 		trees.add(tree);
-		// TODO: Make sure the whole trees are rendered inside the canvas
 		// TODO: Render only one apple
 		// TODO: Render the apple on top of the player
 	}
@@ -88,14 +87,14 @@ public class Field extends JComponent {
 	private int generateRandomX() {
 		// at least half the width of the tree plus a few pixels
 		int leftMargin = Field.TREE_WIDTH_IN_PIXELS / 2 + 5;
-		int rightMargin = Contants.FIELD_WIDTH - leftMargin;
+		int rightMargin = Constants.FIELD_WIDTH - leftMargin;
 		return  getRandomNumber(leftMargin, rightMargin);
 	}
 
 	private int generateRandomY() {
-		// at least half the width of the tree plus a few pixels
-		int topMargin = Field.TREE_WIDTH_IN_PIXELS / 2 + 5;
-		int bottomMargin = Contants.FIELD_HEIGHT - topMargin;
+		// at least half the height of the tree plus a few pixels
+		int topMargin = Field.TREE_HEIGHT_IN_PIXELS / 2 + 5;
+		int bottomMargin = Constants.FIELD_HEIGHT - (topMargin - 5);
 		return  getRandomNumber(topMargin, bottomMargin);
 	}
 }
