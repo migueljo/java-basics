@@ -19,6 +19,12 @@ public class DateAndTime {
 		System.out.println("Seconds: " + ChronoUnit.SECONDS.between(dt0, dt1));
 		System.out.println("Days: " + ChronoUnit.DAYS.between(dt0, dt1));
 		System.out.println("Years: " + ChronoUnit.YEARS.between(dt0, dt1));
+
+		LocalDate today = LocalDate.now();
+		LocalDate reminder = today.plus(1, ChronoUnit.WEEKS);
+		System.out.println("Today: " + today + ", Next reminder: " + reminder);
+		LocalDateTime betterReminder = reminder.atTime(LocalTime.of(9, 0));
+		System.out.println("Better reminder: " + betterReminder);
 	}
 
 	static void basicDateAndTimes() {
