@@ -41,7 +41,7 @@ public class AppleToss extends JFrame {
 		add(field);
 	}
 
-	public static void main(String args[]) {
+	public static void main(String[] args) {
 		AppleToss game = new AppleToss();
 		game.setVisible(true);
 	}
