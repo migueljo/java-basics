@@ -1,6 +1,7 @@
 package learningjavabook.chapter8;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 public class DateAndTime {
@@ -13,5 +14,9 @@ public class DateAndTime {
 		System.out.println(t1);
 		LocalTime t2 = LocalTime.parse("23:58");
 		System.out.println(t2);
+		LocalDateTime dt0 = LocalDateTime.of(2019, 11, 25, 11, 45);
+		System.out.println(dt0);
+		LocalDateTime dt1 = LocalDateTime.parse("2019-11-26T11:50");
+		System.out.println(dt1);
 	}
 }
