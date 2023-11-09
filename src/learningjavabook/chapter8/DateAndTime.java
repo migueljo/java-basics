@@ -3,6 +3,7 @@ package learningjavabook.chapter8;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.Date;
 
 public class DateAndTime {
 	public static void main(String[] args) {
@@ -18,5 +19,11 @@ public class DateAndTime {
 		System.out.println(dt0);
 		LocalDateTime dt1 = LocalDateTime.parse("2019-11-26T11:50");
 		System.out.println(dt1);
+		LocalDateTime dt2 = LocalDateTime.now();
+		System.out.println(dt2);
+		LocalDate d2 = LocalDate.now();
+		System.out.println(d2);
+		LocalTime t3 = LocalTime.now();
+		System.out.println(t3);
 	}
 }
