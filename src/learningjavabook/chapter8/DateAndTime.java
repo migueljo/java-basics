@@ -1,8 +1,6 @@
 package learningjavabook.chapter8;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
+import java.time.*;
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
@@ -10,6 +8,18 @@ public class DateAndTime {
 	public static void main(String[] args) {
 		basicDateAndTimes();
 		comparingAndManipulating();
+		timeZones();
+	}
+
+	static void timeZones() {
+		LocalDateTime dt0 = LocalDateTime.now();
+		ZonedDateTime zdt0 = ZonedDateTime.now();
+		System.out.println("Local date time:" + dt0 + ", Zoned date time: " + zdt0);
+		System.out.println(ZoneId.getAvailableZoneIds());
+		ZonedDateTime bogotaTime = ZonedDateTime.now();
+		ZonedDateTime tasmaniaTime = dt0.atZone(ZoneId.of("Australia/Tasmania"));
+		System.out.println("Local date time:" + dt0 + ", Australia/Tasmania date time: " + tasmaniaTime);
+		System.out.println(bogotaTime.withZoneSameInstant(ZoneId.of("Australia/Tasmania")));
 	}
 
 	static void comparingAndManipulating() {
