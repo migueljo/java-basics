@@ -31,7 +31,7 @@ public class DateAndTime {
 		System.out.println("Years: " + ChronoUnit.YEARS.between(dt0, dt1));
 
 		LocalDate today = LocalDate.now();
-		LocalDate reminder = today.plus(1, ChronoUnit.WEEKS);
+		LocalDate reminder = today.plusWeeks(1);
 		System.out.println("Today: " + today + ", Next reminder: " + reminder);
 		LocalDateTime betterReminder = reminder.atTime(LocalTime.of(9, 0));
 		System.out.println("Better reminder: " + betterReminder);
