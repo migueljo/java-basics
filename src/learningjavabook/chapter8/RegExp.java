@@ -122,10 +122,10 @@ public class RegExp {
 		System.out.println("-----------------------------------");
 		System.out.println("Range from x to infinite");
 		ArrayList<String> ranges2 = new ArrayList<>();
-		ranges2.add("Hola");
-		ranges2.add("Caro");
-		ranges2.add("Motos");
-		ranges2.add("Televisor");
+		ranges2.add("Hello");
+		ranges2.add("Cars");
+		ranges2.add("Bikes");
+		ranges2.add("TVs");
 		for (String v : ranges2) {
 			String regex = "\\b\\w{5,}\\b";
 			System.out.println("Range -> " + v + " matches " + regex + " ? " + v.matches(regex));
