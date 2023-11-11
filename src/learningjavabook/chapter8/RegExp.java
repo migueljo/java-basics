@@ -75,13 +75,13 @@ public class RegExp {
 	}
 
 	static void repetition() {
-		ArrayList<String> anys = new ArrayList<>();
-		anys.add("01");
-		anys.add("001");
-		anys.add("0001");
-		anys.add("1");
-		anys.add("011");
-		for (String v : anys) {
+		ArrayList<String> ans = new ArrayList<>();
+		ans.add("01");
+		ans.add("001");
+		ans.add("0001");
+		ans.add("1");
+		ans.add("011");
+		for (String v : ans) {
 			String regex = "0*\\d";
 			System.out.println("Any -> " + v + " matches " + regex + " ? " + v.matches(regex));
 		}
