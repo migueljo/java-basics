@@ -117,7 +117,7 @@ public class Strings {
 		int i1 = alphabet.indexOf("a");
 		int i2 = alphabet.indexOf("def");
 		int i3 = alphabet.indexOf("abfd");
-		System.out.println(i1 + ", " + i2 + ", " + i3 + "");
+		System.out.println(i1 + ", " + i2 + ", " + i3);
 
 		System.out.println("Last index of: " + alphabet.lastIndexOf("abc"));
 
