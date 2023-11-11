@@ -68,7 +68,7 @@ public class RegExp {
 		emails.add("@com");
 		for (String v : emails) {
 			// \w+@[\w.]*(com|net|edu|gov)
-			String regex = "\\w+@[\\w+\\.]+(com|net|edu|gov)";
+			String regex = "\\w+@[\\w+.]+(com|net|edu|gov)";
 			System.out.println("Logical OR | -> " + v + " matches \"" + regex + "\" ? " + v.matches(regex));
 		}
 		System.out.println("-----------------------------------");
