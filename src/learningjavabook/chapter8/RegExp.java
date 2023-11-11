@@ -110,10 +110,10 @@ public class RegExp {
 		System.out.println("-----------------------------------");
 		System.out.println("Range inclusive");
 		ArrayList<String> ranges = new ArrayList<>();
-		ranges.add("Holas");
-		ranges.add("Caros");
-		ranges.add("Motos");
-		ranges.add("Televisor");
+		ranges.add("Hello");
+		ranges.add("Cars");
+		ranges.add("Bikes");
+		ranges.add("TVs");
 		for (String v : ranges) {
 			String regex = "\\b\\w{5,7}\\b";
 			System.out.println("Range -> " + v + " matches " + regex + " ? " + v.matches(regex));
