@@ -25,6 +25,7 @@ public class DateAndTime {
 
 		LocalDate today = LocalDate.of(2023, 12, 23);
 		System.out.println(shortUS.format(today));
+		System.out.println(shortUS.format(piDay));
 	}
 
 	static void timeZones() {
