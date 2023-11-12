@@ -19,6 +19,9 @@ public class DateAndTime {
 		DateTimeFormatter shortUS = DateTimeFormatter.ofPattern("MM/dd/yy");
 		LocalDate valentines = LocalDate.parse("02/14/19", shortUS);
 		System.out.println(valentines);
+
+		LocalDate piDay = LocalDate.parse("03/14/19", shortUS);
+		System.out.println(piDay);
 	}
 
 	static void timeZones() {
