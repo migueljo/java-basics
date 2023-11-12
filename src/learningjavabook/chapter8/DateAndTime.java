@@ -26,6 +26,12 @@ public class DateAndTime {
 		LocalDate today = LocalDate.of(2023, 12, 23);
 		System.out.println(shortUS.format(today));
 		System.out.println(shortUS.format(piDay));
+
+		DateTimeFormatter military = DateTimeFormatter.ofPattern("HHmm");
+		LocalTime sunset = LocalTime.parse("2020", military);
+		System.out.println(military.format(sunset));
+		DateTimeFormatter basic = DateTimeFormatter.ofPattern("HH:mm a");
+		System.out.println(basic.format(sunset));
 	}
 
 	static void timeZones() {
