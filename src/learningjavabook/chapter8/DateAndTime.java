@@ -1,6 +1,7 @@
 package learningjavabook.chapter8;
 
 import java.time.*;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
@@ -13,10 +14,16 @@ public class DateAndTime {
 	}
 
 	static void dateTimeFormatter() {
-
+		System.out.println("------------------------------");
+		System.out.println("Date time formatter");
+		DateTimeFormatter shortUS = DateTimeFormatter.ofPattern("MM/dd/yy");
+		LocalDate valentines = LocalDate.parse("02/14/19", shortUS);
+		System.out.println(valentines);
 	}
 
 	static void timeZones() {
+		System.out.println("------------------------------");
+		System.out.println("Time zones");
 		LocalDateTime dt0 = LocalDateTime.now();
 		ZonedDateTime zdt0 = ZonedDateTime.now();
 		System.out.println("Local date time:" + dt0 + ", Zoned date time: " + zdt0);
