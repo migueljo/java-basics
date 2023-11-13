@@ -15,7 +15,14 @@ public class DateAndTime {
 	}
 
 	static void instants() {
-
+		System.out.println("------------------------------");
+		System.out.println("Instants");
+		Instant time1 = Instant.now();
+		Instant time2 = Instant.now();
+		System.out.println(time1);
+		System.out.println(time2);
+		LocalDateTime dt1 = LocalDateTime.now();
+		System.out.println(dt1);
 	}
 
 	static void dateTimeFormatter() {
