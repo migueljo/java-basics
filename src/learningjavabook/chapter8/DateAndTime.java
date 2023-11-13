@@ -11,6 +11,11 @@ public class DateAndTime {
 		comparingAndManipulating();
 		timeZones();
 		dateTimeFormatter();
+		instants();
+	}
+
+	static void instants() {
+
 	}
 
 	static void dateTimeFormatter() {
