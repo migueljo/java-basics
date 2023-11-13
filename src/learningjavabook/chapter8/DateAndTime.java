@@ -34,7 +34,6 @@ public class DateAndTime {
 		System.out.println(basic.format(sunset));
 
 		DateTimeFormatter appointment = DateTimeFormatter.ofPattern("h:mm a dd/MM/yy z");
-		// ZonedDateTime dentist = ZonedDateTime.parse("10:30 AM 11/01/19 EST", appointment);
 		ZonedDateTime nowEST = ZonedDateTime.now();
 		System.out.println(appointment.format(nowEST));
 	}
