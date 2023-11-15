@@ -18,13 +18,10 @@ public class Field extends JComponent {
 	public static final int TREE_HEIGHT_IN_PIXELS = 2 * TREE_WIDTH_IN_PIXELS;
 	public static final int PHYSICIST_SIZE_IN_PIXELS = 75;
 	public static final int MAX_TREES = 12;
-
 	Color fieldColor = Color.GRAY;
-
-	Apple a1 = new Apple();
-	Apple a2 = new Apple();
 	Tree tree = new Tree();
 	ArrayList<Tree> trees = new ArrayList<>();
+	ArrayList<Apple> apples = new ArrayList<>();
 	Physicist physicist;
 
 	public void addTree() {
@@ -39,16 +36,18 @@ public class Field extends JComponent {
 		// TODO: Render the apple on top of the player
 	}
 
+	public void addApple() {
+
+	}
+
 	public void setupApples() {
+		Apple apple = new Apple();
 		// For now, just play with our apple attributes directly
-		a1.diameter = 3.0f;
-		a1.mass = 5.0f;
-		a1.x = 20;
-		a1.y = 40;
-		a2.diameter = 8.0f;
-		a2.mass = 10.0f;
-		a2.x = 70;
-		a2.y = 200;
+		apple.diameter = 3.0f;
+		apple.mass = 5.0f;
+		apple.x = 20;
+		apple.y = 40;
+		apples.add(apple);
 	}
 
 	public void setupTree() {
@@ -64,19 +63,12 @@ public class Field extends JComponent {
 	protected void paintComponent(Graphics g) {
 		g.setColor(fieldColor);
 		g.fillRect(0,0, getWidth(), getHeight());
+		physicist.draw(g);
 		for (Tree tree : trees) {
 			tree.draw(g);
 		}
-		physicist.draw(g);
-		a1.draw(g);
-		a2.draw(g);
-	}
-
-	public void detectCollisions() {
-		if (a1.isTouching(a2)) {
-			System.out.println("Collision detected!");
-		} else {
-			System.out.println("Apples are not touching.");
+		for (Apple apple: apples) {
+			apple.draw(g);
 		}
 	}
 

@@ -8,6 +8,5 @@ public class PrintAppleDetails {
 		f.a1.printDetails();
 		System.out.println("Apple a2:");
 		f.a2.printDetails();
-		f.detectCollisions();
 	}
 }
