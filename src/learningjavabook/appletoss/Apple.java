@@ -13,6 +13,9 @@ public class Apple implements GamePiece {
 	float diameter = 1.0f;
 	int x, y;
 	int size;
+	private long lastStep;
+	private float velocityX;
+	private float velocityY;
 
 	// Setup some size constants
 	public static final int SMALL = 0;
@@ -154,5 +157,23 @@ public class Apple implements GamePiece {
 		// Return names for our constants
 		// The index of the name should match the value of the constant
 		return new String[] { "SMALL", "MEDIUM", "LARGE" };
+	}
+
+	public void toss(float angle, float velocity) {
+		lastStep = System.currentTimeMillis();
+		double radians = angle / 180 * Math.PI;
+		velocityX = (float)(velocity * Math.cos(radians) / mass);
+		// Start with negative velocity since "up" means smaller values of y
+		velocityY = (float)(-velocity * Math.sin(radians) / mass);
+	}
+
+	public void step() {
+		// Make sure we're moving at all using our lastStep tracker as a sentinel
+		if (lastStep > 0) {
+			// let's apply our gravity
+			long now = System.currentTimeMillis();
+			float slice = (now - lastStep) / 1000.0f;
+			velocityY = velocityY + (slice * Field.GRAVITY);
+		}
 	}
 }
