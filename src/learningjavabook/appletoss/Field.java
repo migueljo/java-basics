@@ -89,6 +89,4 @@ public class Field extends JComponent {
 		int bottomMargin = Constants.FIELD_HEIGHT - (topMargin - 5);
 		return  getRandomNumber(topMargin, bottomMargin);
 	}
-
-
 }
