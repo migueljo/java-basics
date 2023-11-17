@@ -32,8 +32,6 @@ public class Field extends JComponent {
 			System.err.println("Repositioning an intersecting tree");
 		}
 		trees.add(tree);
-		// TODO: Render only one apple
-		// TODO: Render the apple on top of the player
 	}
 
 	public void addApple() {
