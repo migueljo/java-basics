@@ -34,10 +34,6 @@ public class Field extends JComponent {
 		trees.add(tree);
 	}
 
-	public void addApple() {
-
-	}
-
 	public void setupApples() {
 		Apple apple = new Apple();
 		// For now, just play with our apple attributes directly
