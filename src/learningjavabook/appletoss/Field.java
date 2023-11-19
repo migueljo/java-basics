@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * as well as how to create new methods like setupApples() and detectCollisions().
  */
 public class Field extends JComponent {
-	public static final float GRAVITY = 9.8f;  // feet per second per second
+	public static final float GRAVITY = 9.8f;  // feet per second
 	public static final int STEP = 40;   // duration of an animation frame in milliseconds
 	public static final int APPLE_SIZE_IN_PIXELS = 30;
 	public static final int TREE_WIDTH_IN_PIXELS = 60;
@@ -46,7 +46,7 @@ public class Field extends JComponent {
 
 	public void setupTree() {
 		// Unlike apples, we'll use the setPosition() method from our
-		// GamePiece interface to setup our lonely tree
+		// GamePiece interface to set up our lonely tree
 		tree.setPosition(500,200);
 	}
 
