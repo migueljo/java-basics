@@ -14,4 +14,8 @@ public class URLQueue {
 		}
 		return null;
 	}
+
+	public boolean isEmpty() {
+		return urlQueue.isEmpty();
+	}
 }
