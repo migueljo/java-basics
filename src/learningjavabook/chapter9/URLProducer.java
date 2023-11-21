@@ -12,6 +12,9 @@ public class URLProducer {
 		if (count <= 0) {
 			throw new IllegalArgumentException("Count must be positive");
 		}
+		if (queue == null) {
+			throw new IllegalArgumentException("Shared queue must not be null");
+		}
 
 		producerID = id;
 		urlCount = count;
