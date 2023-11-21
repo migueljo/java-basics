@@ -2,7 +2,7 @@ package learningjavabook.chapter9;
 
 import java.util.Random;
 
-public class URLProducer {
+public class URLProducer extends Thread {
 	String producerID;
 	int urlCount;
 	URLQueue queue;
