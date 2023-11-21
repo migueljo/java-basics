@@ -3,10 +3,10 @@ package learningjavabook.chapter9;
 import java.util.Random;
 
 public class URLConsumer extends Thread{
-	String consumerID;
-	URLQueue queue;
-	boolean keepWorking;
-	Random delay;
+	private String consumerID;
+	private URLQueue queue;
+	private boolean keepWorking;
+	private Random delay;
 
 	URLConsumer(String id, URLQueue queue) {
 		if (queue == null) {
@@ -33,5 +33,9 @@ public class URLConsumer extends Thread{
 				break;
 			}
 		}
+	}
+
+	public void setKeepWorking(boolean keepWorking) {
+		this.keepWorking = keepWorking;
 	}
 }
