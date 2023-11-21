@@ -8,6 +8,17 @@ public class URLProducer {
 	URLQueue queue;
 	Random delay;
 
+	URLProducer(String id, int count, URLQueue queue) {
+		if (count <= 0) {
+			throw new IllegalArgumentException("Count must be positive");
+		}
+
+		producerID = id;
+		urlCount = count;
+		this.queue = queue;
+		delay = new Random();
+	}
+
 	public void run() {
 		for (int i = 0; i < urlCount; i++) {
 			String url = "https://some.url/at/path/" + i;
