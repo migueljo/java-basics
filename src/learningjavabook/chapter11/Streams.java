@@ -10,10 +10,6 @@ public class Streams {
 	}
 
 	static void basicIO() {
-		InputStream stdin = System.in;
-		OutputStream stdout = System.out;
-		OutputStream stderr = System.err;
-
 		try {
 			int current;
 			StringBuilder val = new StringBuilder();
