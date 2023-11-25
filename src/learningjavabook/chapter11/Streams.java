@@ -1,12 +1,28 @@
 package learningjavabook.chapter11;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
+import java.text.NumberFormat;
+import java.text.ParseException;
 
 public class Streams {
 	public static void main(String[] args) {
-		basicIO();
+		// basicIO();
+		example1();
+	}
+
+	static void example1() {
+		try {
+			InputStream in = System.in;
+			InputStreamReader charsIn = new InputStreamReader(in);
+			BufferedReader bufferedCharsIn = new BufferedReader(charsIn);
+			String line = bufferedCharsIn.readLine();
+			int i = NumberFormat.getInstance().parse(line).intValue();
+			System.out.println("Int value: " + i);
+		} catch(IOException e) {
+			System.out.println(e);
+		} catch(ParseException pe) {
+			System.out.println(pe);
+		}
 	}
 
 	static void basicIO() {
