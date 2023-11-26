@@ -19,9 +19,9 @@ public class Streams {
 			int i = NumberFormat.getInstance().parse(line).intValue();
 			System.out.println("Int value: " + i);
 		} catch(IOException e) {
-			System.out.println(e);
+			System.out.println("IO Exception:" + e);
 		} catch(ParseException pe) {
-			System.out.println(pe);
+			System.out.println("Parse Exception:" + pe);
 		}
 	}
 
