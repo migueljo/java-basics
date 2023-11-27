@@ -8,6 +8,16 @@ public class Streams {
 	public static void main(String[] args) {
 		// basicIO();
 		example1();
+		dataStreams();
+	}
+
+	static void dataStreams() {
+		try {
+			DataInputStream dis = new DataInputStream( System.in );
+			double d = dis.readDouble();
+		} catch (IOException ioe) {
+			System.out.println("IOException" + ioe);
+		}
 	}
 
 	static void example1() {
