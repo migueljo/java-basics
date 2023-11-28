@@ -19,8 +19,13 @@ public class Streams {
 		File fooFile2 = new File("/tmp", "foo.txt");
 		File tmpDir = new File("/tmp");
 		File fooFile3 = new File(tmpDir, "/foo.txt");
-
 		System.out.println("Current working directory" + System.getProperty("user.dir"));
+
+		String path = "mail/2004/june/merle";
+		path = path.replace('/', File.separatorChar);
+		File mailbox = new File(path);
+		System.out.println("Mailbox path: " + mailbox);
+
 	}
 
 	static void dataStreams() {
