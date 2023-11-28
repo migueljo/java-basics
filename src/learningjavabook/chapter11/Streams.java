@@ -7,14 +7,27 @@ import java.text.ParseException;
 public class Streams {
 	public static void main(String[] args) {
 		// basicIO();
-		example1();
-		dataStreams();
+		// example1();
+		// dataStreams();
+		fileConstructors();
+	}
+
+	static void fileConstructors() {
+		File fooFile = new File("/tmp/foo.txt");
+		File barFile = new File("/tmp/bar");
+		File fooFileRelative = new File("foo.txt");
+		File fooFile2 = new File("/tmp", "foo.txt");
+		File tmpDir = new File("/tmp");
+		File fooFile3 = new File(tmpDir, "/foo.txt");
+
+		System.out.println("Current working directory" + System.getProperty("user.dir"));
 	}
 
 	static void dataStreams() {
 		try {
 			DataInputStream dis = new DataInputStream( System.in );
 			double d = dis.readDouble();
+			System.out.println("Double value:" + d);
 		} catch (IOException ioe) {
 			System.out.println("IOException" + ioe);
 		}
