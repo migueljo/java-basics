@@ -3,6 +3,7 @@ package learningjavabook.chapter11;
 import java.io.*;
 import java.text.NumberFormat;
 import java.text.ParseException;
+import java.util.Arrays;
 
 public class Streams {
 	public static void main(String[] args) {
@@ -28,10 +29,14 @@ public class Streams {
 
 		String[] path2 = { "mail", "2004", "june", "merle" };
 		StringBuffer sb = new StringBuffer(path2[0]);
-		for (int i = 1; i < sb.length(); i++) {
+		for (int i = 1; i < path2.length; i++) {
 			sb.append(File.separator).append(path2[i]);
 		}
 		File mailbox2 = new File(sb.toString());
+		System.out.println("Mailbox 2: " + sb.toString());
+
+		System.out.println("Roots: " + Arrays.toString(File.listRoots()));
+
 	}
 
 	static void dataStreams() {
