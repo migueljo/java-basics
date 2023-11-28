@@ -29,7 +29,7 @@ public class Streams {
 		String[] path2 = { "mail", "2004", "june", "merle" };
 		StringBuffer sb = new StringBuffer(path2[0]);
 		for (int i = 1; i < sb.length(); i++) {
-			sb.append(File.separator + path2[i]);
+			sb.append(File.separator).append(path2[i]);
 		}
 		File mailbox2 = new File(sb.toString());
 	}
