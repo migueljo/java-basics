@@ -20,6 +20,13 @@ public class Streams {
 		String name = fooFile.getName();
 		long length = fooFile.length();
 		System.out.println( fileType + name + ", " + length + " bytes " );
+
+		File tmpDir = new File("/tmp");
+		String[] filenames = tmpDir.list();
+		File[] files = tmpDir.listFiles();
+
+		System.out.println("Filenames inside /tmp " + Arrays.toString(filenames));
+		System.out.println("Files inside /tmp: " + Arrays.toString(files));
 	}
 
 	static void fileConstructors() {
