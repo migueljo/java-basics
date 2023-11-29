@@ -15,7 +15,11 @@ public class Streams {
 	}
 
 	static void fileOperations() {
-		File fooFile = new File("/tmp/foo.txt");
+		File fooFile = new File("/tmp", "foo.txt");
+		String fileType = fooFile.isFile() ? "File" : "Directory ";
+		String name = fooFile.getName();
+		long length = fooFile.length();
+		System.out.println( fileType + name + ", " + length + " bytes " );
 	}
 
 	static void fileConstructors() {
