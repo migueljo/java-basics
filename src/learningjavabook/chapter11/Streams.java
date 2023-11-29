@@ -10,7 +10,12 @@ public class Streams {
 		// basicIO();
 		// example1();
 		// dataStreams();
-		fileConstructors();
+		// fileConstructors();
+		fileOperations();
+	}
+
+	static void fileOperations() {
+		File fooFile = new File("/tmp/foo.txt");
 	}
 
 	static void fileConstructors() {
