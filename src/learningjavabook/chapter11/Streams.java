@@ -1,5 +1,6 @@
 package learningjavabook.chapter11;
 
+import java.awt.*;
 import java.io.*;
 import java.text.NumberFormat;
 import java.text.ParseException;
@@ -24,7 +25,6 @@ public class Streams {
 		File tmpDir = new File("/tmp");
 		String[] filenames = tmpDir.list();
 		File[] files = tmpDir.listFiles();
-
 		System.out.println("Filenames inside /tmp " + Arrays.toString(filenames));
 		System.out.println("Files inside /tmp: " + Arrays.toString(files));
 	}
