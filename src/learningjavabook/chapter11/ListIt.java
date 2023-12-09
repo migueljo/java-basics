@@ -4,6 +4,11 @@ import java.io.*;
 
 public class ListIt {
 	public static void main(String[] args) {
+		// Return early if no arguments is passed...
+		if (args.length == 0) {
+			return;
+		}
+
 		File file = new File(args[0]);
 
 		if (!file.exists() || !file.canRead()) {
