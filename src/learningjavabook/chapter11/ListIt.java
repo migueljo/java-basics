@@ -13,7 +13,7 @@ public class ListIt {
 		File file = new File(args[0]);
 
 		if (!file.exists() || !file.canRead()) {
-			System.err.println("Can't read" + file);
+			System.err.println("Can't read file:" + file);
 			return;
 		}
 
