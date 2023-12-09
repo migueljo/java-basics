@@ -12,6 +12,7 @@ public class ListIt {
 
 		File file = new File(args[0]);
 
+		// Return early if file does not exist or is not readable for whatever reason
 		if (!file.exists() || !file.canRead()) {
 			System.err.println("Can't read file:" + file);
 			return;
