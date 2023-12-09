@@ -6,6 +6,7 @@ public class ListIt {
 	public static void main(String[] args) {
 		// Return early if no arguments is passed...
 		if (args.length == 0) {
+			System.out.println("No file was provided as an argument");
 			return;
 		}
 
