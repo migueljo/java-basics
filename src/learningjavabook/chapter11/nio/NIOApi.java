@@ -18,12 +18,24 @@ public class NIOApi {
 	static void fileSystemAndPath() {
 		try {
 			FileSystem fs = FileSystems.getDefault();
+			/*
 			Map<String, String> props = new HashMap<>();
 			URI zipUri = URI.create("jar:file:/Users/mmartinez/tmp/MyArchive.zip");
 			FileSystem zipfs = FileSystems.newFileSystem(zipUri, props);
 			Path fooPath = fs.getPath("/tmp/foo.txt");
 			OutputStream out = Files.newOutputStream(fooPath);
-		} catch (IOException e) {
+			*/
+
+			Path miguelPath = fs.getPath("/Users/mmartinez");
+			Path miguelTmp = miguelPath.resolve("tmp");
+			System.out.println("Miguel tmp: " + miguelTmp);
+
+			Path absPath = miguelPath.resolve("/tmp");
+			System.out.println("Absolute path: " + absPath);
+
+			Path siblingPath = miguelPath.resolveSibling("andres");
+			System.out.println("Sibling path: " + siblingPath);
+		} catch (Exception e) {
 			System.err.println(e);
 		}
 	}
